@@ -14,14 +14,13 @@ class Login_M extends CI_Model {
     }
 
 
-    // fonction login
-    public function login($email='', $password='',$nom='',$genre='',$taille='',$poids=''){
+    //fonction login
+    public function login($email='', $password=''){
         $sql='SELECT*FROM users WHERE email=%s and password=%s';
         $query=$this->db->query($sql);
         return $query->result_array();
     }
 
-    
    
 
 
