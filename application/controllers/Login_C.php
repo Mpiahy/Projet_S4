@@ -53,9 +53,9 @@ class Login_C extends CI_Controller {
     public function traiteLogin()
     {
           $id = array();
-          $username = $this->input->post('email');
+          $email = $this->input->post('email');
           $password = $this->input->post('password');
-          $user= $this->connex->getUsers($username,$password);
+          $user= $this->connex->getUsers($email,$password);
             if($user != null){
                 $this->session->set_userdata('user_id',$user['id']);
                 $this->load->view('welcome_message');
