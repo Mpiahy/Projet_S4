@@ -65,7 +65,7 @@
                         <h6 class="display-6" style="text-align: right;font-size: 16px;padding-top: 5px;font-style: italic;">de</h6>
                     </div>
                     <div class="col" style="padding-left: 0px;margin-right: -278px;padding-right: 0px;">
-                        <input type="number" name="Poids" id="">
+                        <input type="number" name="Poids" >
                     </div>
                     <div class="col" style="padding-left: 0px;">
                         <h6 class="display-6" style="text-align: left;font-size: 16px;margin-left: 6px;padding-top: 5px;font-style: italic;">Kg</h6>
