@@ -70,31 +70,8 @@
                     <div class="col" style="padding-left: 0px;">
                         <h6 class="display-6" style="text-align: left;font-size: 16px;margin-left: 6px;padding-top: 5px;font-style: italic;">Kg</h6>
                     </div>
->>>>>>> Stashed changes
                 </div>
- 
             </div>
-<<<<<<< Updated upstream
-            <form method="post" action="<?php echo base_url("Accueil_C/traitement");?>">
-                <div class="row">
-                    <div class="col-md-6 col-lg-4 col-xxl-6 offset-xxl-0">
-                        <a class="d-block mx-auto portfolio-item" href="#portfolio-modal-5" data-bs-toggle="modal"></a>
-                        <h3 class="text-center">Poids </h3>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xxl-6">
-                        <a class="d-block mx-auto portfolio-item" href="#portfolio-modal-6" data-bs-toggle="modal"></a>
-                        <input type="text" name ="poids">
-                    <div class="col">
-                        <button class="btn btn-secondary btn-lg" type="submit" style="text-align: center;margin-top: 32px;margin-right: 166px;padding-right: 30px;padding-left: 30px;padding-top: 10px;padding-bottom: 10px;font-size: 20px;font-family: Montserrat, sans-serif;">Valider</button>
-                    </div>
-                </div>
-            </form>
-=======
-            <div class="col offset-xl-9" style="padding-left: 0px;">
-                <button class="btn btn-info" type="submit" style="margin-top: 23px;">Valider</button>
-            </div>
-        </form>
->>>>>>> Stashed changes
         </div>
     </section>
     <footer class="text-center footer" style="padding-top: 20px;margin-bottom: -82px;">
