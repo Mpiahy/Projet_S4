@@ -61,6 +61,7 @@ create table sport
     duree int ,
     FOREIGN KEY(idObjectif) REFERENCES objectif(idObjectif)
 )engine = innoDB;
+
 INSERT INTO sport (nom_sport,idObjectif,frais,duree) VALUES ('Football',1,40000,30); 
 INSERT INTO sport (nom_sport,idObjectif,frais,duree) VALUES ('Basketball',1,10000,25); 
 INSERT INTO sport (nom_sport,idObjectif,frais,duree) VALUES ('Volley-ball',1,25000,20); 
