@@ -44,13 +44,13 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-2 offset-xl-3" style="padding-left: 0px;padding-right: 0px;padding-top: 22px;padding-bottom: 25px;"><select style="margin-left: 86px;padding-bottom: 7px;padding-top: 7px;">
-                            <optgroup>
-                                <option value="1" selected>Choisir l'opération</option>
-                                <option value="2">Augmenter</option>
-                                <option value="3">Diminuer</option>
-                            </optgroup>
-                        </select></div>
+                    <div class="col-xl-2 offset-xl-3" style="padding-left: 0px;padding-right: 0px;padding-top: 22px;padding-bottom: 25px;">
+                        <select style="padding-bottom: 7px;padding-top: 7px;">
+                            <option value="1" selected>Choisir l'opération</option>
+                            <option value="2">Augmenter</option>
+                            <option value="3">Diminuer</option>
+                        </select>
+                    </div>
                     <div class="col-xl-2 offset-xl-0" style="padding-left: 0px;padding-top: 22px;padding-bottom: 25px;padding-right: 35px;">
                         <h6 class="display-6" style="text-align: center;font-size: 16px;font-style: italic;margin-left: 67px;padding-top: 7px;">de</h6>
                     </div>
