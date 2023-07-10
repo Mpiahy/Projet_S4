@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -29,6 +29,7 @@ class Login_M extends CI_Model {
         $query=$this->db->query($sql);
         return $query->result_array();
     }
+    
 
    
 
