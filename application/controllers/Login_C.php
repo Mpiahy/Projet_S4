@@ -61,7 +61,7 @@ class Login_C extends CI_Controller {
           $user['id']= $this->Login_M->getUsers($email,$password);
             if($user != null){
                 $this->session->set_userdata('user_id',$user['id']);
-                $this->load->view('welcome_message',$user);
+                $this->load->view('accueil',$user);
             }else{
                 $data['error'] = 'Invalid username or password';
                 $this->load->view('login');
@@ -85,5 +85,11 @@ class Login_C extends CI_Controller {
         $this->Login_M->insert($email,$password,$nom,$genre,$taille,$poids);
         redirect('Login_C/index');
 
+	}
+	public function logOut()
+    {
+        $this->session->unset_userdata('user_id'); // Supprimer l'ID de l'utilisateur de la session
+        $this->session->sess_destroy(); // Détruire la session
+        redirect('Login_C/index');
     }
 }
