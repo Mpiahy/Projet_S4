@@ -31,7 +31,7 @@
         </div>
     </header>
     <section id="portfolio" class="portfolio">
-        <form action="#" method="post">
+        <form action="<?php echo base_url("Regime_M/traitement")?>" method="post">
             <div class="container">
                 <h2 class="text-center text-secondary">Votre Objectif</h2>
                 <hr class="star-dark mb-5" />
@@ -46,16 +46,16 @@
                 <div class="row">
                     <div class="col-xl-2 offset-xl-3" style="padding-left: 0px;padding-right: 0px;padding-top: 22px;padding-bottom: 25px;"><select style="margin-left: 86px;padding-bottom: 7px;padding-top: 7px;">
                             <optgroup>
-                                <option value="1" selected>Choisir l'opération</option>
-                                <option value="2">Augmenter</option>
-                                <option value="3">Diminuer</option>
+                                <option name="choix" selected>Choisir l'opération</option>
+                                <option value="11">Augmenter</option>
+                                <option value="1">Diminuer</option>
                             </optgroup>
                         </select></div>
                     <div class="col-xl-2 offset-xl-0" style="padding-left: 0px;padding-top: 22px;padding-bottom: 25px;padding-right: 35px;">
                         <h6 class="display-6" style="text-align: center;font-size: 16px;font-style: italic;margin-left: 67px;padding-top: 7px;">de</h6>
                     </div>
                     <div class="col-xl-2 offset-xl-0" style="padding-left: 0px;padding-right: 0px;padding-top: 22px;padding-bottom: 25px;margin-left: 0px;">
-                        <input type="number" />
+                        <input type="number" name="poids"/>
                     </div>
                     <div class="col-xl-2 offset-xl-0" style="padding-left: 0px;padding-right: 0px;padding-top: 22px;padding-bottom: 25px;">
                         <h6 class="display-6" style="text-align: left;font-size: 16px;margin-left: 6px;padding-top: 5px;font-style: italic;">Kg</h6>
