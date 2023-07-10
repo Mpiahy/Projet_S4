@@ -24,6 +24,7 @@ class Login_C extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Login_M');
 		$this->load->library('form_validation');
+		$this->load->library('session');
        
 	}
 	public function index()
@@ -55,16 +56,16 @@ class Login_C extends CI_Controller {
     public function traiteLogin()
     {
           $id = array();
-          $username = $this->input->post('email');
+          $email = $this->input->post('email');
           $password = $this->input->post('password');
-          $user= $this->connex->getUsers($username,$password);
+          $user= $this->Login_M->getUsers($email,$password);
             if($user != null){
                 $this->session->set_userdata('user_id',$user['id']);
                 $this->load->view('welcome_message');
                 
             }else{
                 $data['error'] = 'Invalid username or password';
-                $this->load->view('Index');
+                $this->load->view('login');
 			}
 	}
 	public function insertUsers()
@@ -75,7 +76,7 @@ class Login_C extends CI_Controller {
 		if($genre == '1')
 		{
 			$genre = 'homme';
-		}else if($gender == '2'){
+		}else if($genre == '2'){
 			$genre = 'femme'; 
 		}
 

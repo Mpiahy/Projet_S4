@@ -42,21 +42,21 @@
     <div class="limiter">
         <div class="container-login100" style="background-image: url('<?php echo base_url('assets/login_template/images/bg-01.jpg'); ?>')">
             <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-                <form class="login100-form validate-form">
+                <form class="login100-form validate-form"  method="post" action ="<?php echo base_url("Login_C/traiteLogin") ?>">
                     <span class="login100-form-title p-b-49">
                         Se connecter
                     </span>
 
                     <div class="wrap-input100 validate-input m-b-23" data-validate="Email ou Nom D'utilisateur requis">
-                        <span class="label-input100">Email ou Nom D'utilisateur</span>
-                        <input class="input100" type="text" name="username"
-                            placeholder="Votre Email ou Nom d'utilisateur">
+                        <span class="label-input100">Email </span>
+                        <input class="input100" type="text" name="email"
+                            placeholder="Votre Email ...">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Mot de passe requis">
                         <span class="label-input100">Mot de passe</span>
-                        <input class="input100" type="password" name="pass" placeholder="Votre Mot de passe">
+                        <input class="input100" type="password" name="password" placeholder="Votre Mot de passe">
                         <span class="focus-input100" data-symbol="&#xf190;"></span>
                     </div>
 
