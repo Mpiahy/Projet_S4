@@ -43,12 +43,12 @@
                     <h3 style="text-align: right;">Votre solde:</h3>
                 </div>
                 <div class="col-md-6">
-                    <h6 class="display-6" style="text-align: left;font-size: 24px;padding-top: 2px;">$solde</h6>
+                    <h6 class="display-6" style="text-align: left;font-size: 24px;padding-top: 2px;"><?php echo $vola['vola'] ; ?></h6>
                 </div>
             </div>
         </div>
         <div class="container" style="margin-top: 25px;">
-            <form id="rechargeForm" action="URL_de_traitement" method="POST">
+            <form id="rechargeForm" action="<?php echo base_url("Argent_C/traitement") ?>" method="POST">
                 <div class="row">
                     <div class="col-md-4">
                         <h1 class="display-6" style="font-size: 24px;text-align: right;margin-left: -44px;">Entrer votre code de recharge:</h1>

@@ -90,3 +90,8 @@ create table code
     valeur int,
     status int 
 )engine = innoDB;
+INSERT INTO code(nombre,valeur,status) VALUES (4256,10000,0);
+INSERT INTO code(nombre,valeur,status) VALUES (4257,5000,0);
+INSERT INTO code(nombre,valeur,status) VALUES (4258,20000,0);
+INSERT INTO code(nombre,valeur,status) VALUES (4259,15000,0);
+INSERT INTO code(nombre,valeur,status) VALUES (4260,10000,1);
