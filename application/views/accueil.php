@@ -31,14 +31,6 @@
         </div>
     </header>
     <section id="portfolio" class="portfolio">
-<<<<<<< Updated upstream
-        <div class="container" style="padding-top: 0px;margin-top: -62px;margin-bottom: -70px;">
-            <h3 class="text-uppercase text-center text-secondary">Votre objectif</h3>
-            <hr class="star-dark mb-5">
-            <div class="row">
-                <div class="col-md-6 col-lg-4 col-xxl-6"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-5" data-bs-toggle="modal"></a>
-                    <h3 class="text-center">Votre poids: <?php echo $id['poids']; ?> Kg</h3>
-=======
         <form action="#" method="post">
             <div class="container">
                 <h2 class="text-center text-secondary">Votre Objectif</h2>
@@ -48,7 +40,7 @@
                         <h6 class="display-6" style="text-align: right;font-size: 20px;font-weight: bold;">Votre poids:</h6>
                     </div>
                     <div class="col" style="padding-left: 0px;text-align: left;margin-bottom: 9px;padding-bottom: 0px;">
-                        <h6 class="display-6" style="text-align: left;font-size: 20px;margin-bottom: 0px;padding-left: 25px;">$Weight</h6>
+                        <h6 class="display-6" style="text-align: left;font-size: 20px;margin-bottom: 0px;padding-left: 25px;"><?php echo $id['poids']; ?> Kg</h6>
                     </div>
                 </div>
                 <div class="row">
