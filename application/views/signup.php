@@ -80,12 +80,6 @@
                         <span class="focus-input100" data-symbol="&#xf190;"></span>
                     </div>
 
-                    <div class="wrap-input100 validate-input m-b-23" data-validate="Mot de passe requis">
-                        <span class="label-input100">Confirmer votre Mot de passe</span>
-                        <input class="input100" type="password" name="password" placeholder="Confirmer votre Mot de passe">
-                        <span class="focus-input100" data-symbol="&#xf190;"></span>
-                    </div>
-
                     <div class="container-login100-form-btn">
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
