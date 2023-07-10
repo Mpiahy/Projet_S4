@@ -95,3 +95,10 @@ INSERT INTO code(nombre,valeur,status) VALUES (4257,5000,0);
 INSERT INTO code(nombre,valeur,status) VALUES (4258,20000,0);
 INSERT INTO code(nombre,valeur,status) VALUES (4259,15000,0);
 INSERT INTO code(nombre,valeur,status) VALUES (4260,10000,1);
+create table confirmation  
+(
+    idUtilisateur int,
+    code int ,
+    valeur int ,
+    FOREIGN KEY (idUtilisateur) REFERENCES users(id)
+)engine = innoDB;

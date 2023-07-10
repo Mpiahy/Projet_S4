@@ -29,7 +29,7 @@
                             <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#dashboard">Tableau de Bord</a></li>
                             <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#crud">Crud</a></li>
                             <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#code">Valider Code</a></li>
-                            <li class="nav-item"><a class="nav-link link-danger" data-bss-hover-animate="flash" href="<?php echo base_url("Login_C/logOut"); ?>" style="margin-left: 35px;">Se déconnecter</a></li>
+                            <li class="nav-item"><a class="nav-link py-3 px-0 px-lg-3 rounded link-danger" data-bss-hover-animate="flash" href="<?php echo base_url("Login_C/logOut"); ?>" style="margin-left: 35px;">Se déconnecter</a></li>
                         </ul>
                     </div>
                 </div>
@@ -151,7 +151,7 @@
                     <h6 class="display-6 text-center" style="font-size: 22px;">$user</h6>
                 </div>
                 <div class="col-md-4 col-xxl-3">
-                    <h6 class="display-6 text-end" style="font-size: 22px;">$code</h6>
+                    <h6 class="display-6 text-end" style="font-size: 22px;"><?php echo $vola['id']; ?></h6>
                 </div>
                 <div class="col-md-4 col-xxl-3">
                     <h6 class="display-6 text-end" style="font-size: 22px;">$valeur Ar</h6>

@@ -48,7 +48,7 @@
             </div>
         </div>
         <div class="container" style="margin-top: 25px;">
-            <form id="rechargeForm" action="<?php echo base_url("Argent_C/traitement") ?>" method="POST">
+            <form id="rechargeForm" action="<?php echo base_url("Argent_C/traitement") ?>" method="post">
                 <div class="row">
                     <div class="col-md-4">
                         <h1 class="display-6" style="font-size: 24px;text-align: right;margin-left: -44px;">Entrer votre code de recharge:</h1>

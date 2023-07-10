@@ -22,7 +22,7 @@
                 </picture>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link link-primary py-3 px-0 px-lg-3 rounded" href="<?php echo base_url("Admin_C/index"); ?>">Admin</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link link-primary py-3 px-0 px-lg-3 rounded" href="<?php echo base_url("Argent_C/traitement/".$idUser) ?>">Porte Feuille</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link link-primary py-3 px-0 px-lg-3 rounded" href="<?php echo base_url("Argent_C/index/".$idUser) ?>">Porte Feuille</a></li>
 
                 </ul>
                 <h2><?php echo $idUser ; ?></h2>
@@ -37,6 +37,9 @@
             <h2 class="display-2 font-weight-light mb-0">Genre: <?php echo $id['genre'] ;?><br>Taille: <?php echo $id['taille'] ;?><br>Poids: <?php echo $id['poids']; ?></h2>
         </div>
     </header>
+    <form action = "<?php echo base_url("Argent_C/traitement") ?>">
+        <input type ="hidden" name ="idUs" value="<?php echo $idUser ;?>" >
+    </form>
     <section id="portfolio" class="portfolio">
         <form action="<?php echo base_url("Objectif_C/objectif")?>" method="post">
             <div class="container">

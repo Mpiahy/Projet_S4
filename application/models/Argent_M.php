@@ -27,10 +27,10 @@ class Argent_M extends CI_Model {
         $resultat=$query->row_array();        
         return $resultat; 
     }
-    public function update($argent)
+    public function insertion($id,$code,$valeur)
     {
-        $sql = "UPDATE portefeuille SET vola =%g";
-        $sql = sprintf($sql,$argent);
+        $sql = "INSERT INTO confirmation(idUtilisateur,code,valeur) values (%g,%g,%g)";
+        $sql = sprintf($sql,$id,$code,$valeur);
         $this->db->query($sql);
 
     }

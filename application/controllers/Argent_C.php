@@ -23,21 +23,17 @@ class Argent_C extends CI_Controller {
     }
     public function traitement()
     {
-        $id = $this->input->get('idUser');
+        $id = $this->input->post('idUs');
         $resultat = array();
-        $resultat['vola'] = $this->Argent_M->getVola($id);
         $code = $this->input->post('codeRecharge');
         $resultat = $this->Argent_M->verification($code);
         if($resultat['status'] == 0)
         {
-            
-            $resultat['vola'] = $resultat['vola']+$resultat['valeur'];
-            $res = $resultat['vola'];
-            $this->Argent_M->update($res);
-         redirect('Argent_C/index');
+            $this->Argent_M->insertion(1,$resultat['code'],$resultat['valeur']);
+            $this->load->view('accueil');
         }else if($resultat['status'] == 1){
             echo "votre code est invalide";
-            redirect('Argent_C/index');
+            $this->load->view('accueil',$data);
             
         }
 

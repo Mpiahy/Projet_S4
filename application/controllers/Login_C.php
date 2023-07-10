@@ -83,7 +83,7 @@ class Login_C extends CI_Controller {
 			else if($user['idCon'] == 1)
 			{
 				$variable = array_merge($data, $user);
-				$this->load->view('welcome_message',$variable);
+				$this->load->view('admin',$variable);
 			}
         }else{
             $data['error'] = 'Invalid username or password';
