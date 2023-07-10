@@ -23,6 +23,8 @@ class Login_C extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Login_M');
+		$this->load->library('form_validation');
+       
 	}
 	public function index()
 	{
@@ -67,11 +69,21 @@ class Login_C extends CI_Controller {
 	}
 	public function insertUsers()
     {
-        $nom = $this->input->post('nom');
-        $username = $this->input->post('email');
-        $password = $this->input->post('password');
-        $this->connex->insert($username,$password,$nom);
-        redirect('Connexion/Index');
+        $nom = $this->input->post('username');
+        $email = $this->input->post('email');
+		$genre = $this->input->post('gender');
+		if($genre == '1')
+		{
+			$genre = 'homme';
+		}else if($gender == '2'){
+			$genre = 'femme'; 
+		}
+
+		$password = $this->input->post('password');
+		$taille = $this->input->post('height');
+		$poids = $this->input->post('weight');
+        $this->Login_M->insert($email,$password,$nom,$genre,$taille,$poids);
+        redirect('Login_C/index');
 
     }
 }

@@ -55,8 +55,8 @@
                         <span class="label-input100">Genre</span>
                         <select class="input100" name="gender">
                             <option value="0">Votre Genre</option>
-                            <option value="homme">Homme</option>
-                            <option value="femme">Femme</option>
+                            <option value="1">Homme</option>
+                            <option value="2">Femme</option>
                         </select>
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
@@ -82,7 +82,7 @@
 
                     <div class="wrap-input100 validate-input m-b-23" data-validate="Mot de passe requis">
                         <span class="label-input100">Confirmer votre Mot de passe</span>
-                        <input class="input100" type="password" name="pass" placeholder="Confirmer votre Mot de passe">
+                        <input class="input100" type="password" name="password" placeholder="Confirmer votre Mot de passe">
                         <span class="focus-input100" data-symbol="&#xf190;"></span>
                     </div>
 
