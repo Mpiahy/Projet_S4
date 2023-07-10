@@ -70,7 +70,7 @@ class Login_C extends CI_Controller {
 		
         
 		if($user != null){
-			if($user['idCon'] == 1)
+			if($user['idCon'] == 0)
 			{
 				$this->session->set_userdata('user_id',$user['id']);
 				$id['id']= $this->Login_M->getUsers($email,$password);
@@ -78,7 +78,7 @@ class Login_C extends CI_Controller {
 				$this->load->view('accueil',$variable);
 			}
 			
-			else if($user['idCon'] == 2)
+			else if($user['idCon'] == 1)
 			{
 				$variable = array_merge($data, $user);
 				$this->load->view('welcome_message',$variable);
