@@ -63,13 +63,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php foreach ($resultat as $data): ?>
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td style="font-family: Montserrat, sans-serif;"><?php $data['nom_regime']; ?></td>
-                                    <td style="font-family: Montserrat, sans-serif;"><?php $data['calcule']; ?></td>
-                                    <td style="font-family: Montserrat, sans-serif;"><?php $data['depense']; ?></td>
-                                </tr>
+                                <?php foreach ($resultat as $valiny): ?>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td style="font-family: Montserrat, sans-serif;"><?php echo $valiny->nom_regime; ?></td>
+                                        <td style="font-family: Montserrat, sans-serif;"><?php echo $valiny->calcule; ?></td>
+                                        <td style="font-family: Montserrat, sans-serif;"><?php echo $valiny->depense; ?></td>
+                                    </tr>
                                 <?php endforeach ?>
                                 <tr></tr>
                             </tbody>

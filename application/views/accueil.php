@@ -72,10 +72,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col offset-xl-9" style="padding-left: 0px;">
-            <button class="btn btn-info" type="submit" style="margin-top: 23px;">Valider</button>
-        </div>
+            <div class="col offset-xl-9" style="padding-left: 0px;">
+                <button class="btn btn-info" type="submit" style="margin-top: 23px;">Valider</button>
+            </div>
         </form>
     </section>
     <footer class="text-center footer" style="padding-top: 20px;margin-bottom: -82px;">
