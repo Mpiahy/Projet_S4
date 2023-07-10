@@ -16,8 +16,6 @@ use sakafonao;
  INSERT INTO users (id,email,password,nom,genre,taille,poids,idCon) VALUES ('mom@gmail.com','1444','mpiahy','masculin' , 150,72,1);
  INSERT INTO users (id,email,password,nom,genre,taille,poids,idCon) VALUES ('aina@gmail.com','1122','aina','masculin',170,80,1);
 
-drop database sakafonao; 
-
 create table login(
     id int auto_increment primary key,
     email varchar(50),
