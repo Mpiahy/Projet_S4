@@ -30,6 +30,10 @@ create table regime(
     FOREIGN KEY (objectif) REFERENCES objectif(idObjectif)
 )engine = innoDB;
 
+
+INSERT INTO objectif(idObjectif,nom) VALUES (1,'Mampihena');
+INSERT INTO objectif(idObjectif,nom) VALUES (11,'Mampitombo');
+
 INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('LEGUME',1,2000,5);
 INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('PROTEINE',1,4000,4);
 INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('FRUITS',1,2000,7);
@@ -40,6 +44,3 @@ INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('Poissons gras',11,40
 INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('Volaille',11,2000,7);
 INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('Avocats',11,500,4);
 INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('Viande Rouge',1,3000,6);
-
-INSERT INTO objectif(idObjectif,nom) VALUES (1,'Mampihena');
-INSERT INTO objectif(idObjectif,nom) VALUES (11,'Mampitombo');
