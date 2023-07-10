@@ -27,20 +27,26 @@ create table regime(
     objectif int ,
     prix int ,
     duree int,
+    poids int,
     FOREIGN KEY (objectif) REFERENCES objectif(idObjectif)
 )engine = innoDB;
 
-
+create table regime_users (
+    nom_regime varchar(50),
+    prix int ,
+    duree int,
+    poids int
+)engine = innoDB;
 INSERT INTO objectif(idObjectif,nom) VALUES (1,'Mampihena');
 INSERT INTO objectif(idObjectif,nom) VALUES (11,'Mampitombo');
 
-INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('LEGUME',1,2000,5);
-INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('PROTEINE',1,4000,4);
-INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('FRUITS',1,2000,7);
-INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('GLUCIDE',11,1000,6);
-INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('NOIX',11,2000,15);
-INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('Epinard',11,2000,20);
-INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('Poissons gras',11,4000,10);
-INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('Volaille',11,2000,7);
-INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('Avocats',11,500,4);
-INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('Viande Rouge',1,3000,6);
+INSERT INTO regime(nom_regime,objectif,prix,duree,poids) VALUES ('LEGUME',1,2000,5,1);
+INSERT INTO regime(nom_regime,objectif,prix,duree,poids) VALUES ('PROTEINE',1,4000,4,2);
+INSERT INTO regime(nom_regime,objectif,prix,duree,poids) VALUES ('FRUITS',1,2000,7,3);
+INSERT INTO regime(nom_regime,objectif,prix,duree,poids) VALUES ('GLUCIDE',11,1000,6,4);
+INSERT INTO regime(nom_regime,objectif,prix,duree,poids) VALUES ('NOIX',11,2000,15,3);
+INSERT INTO regime(nom_regime,objectif,prix,duree,poids) VALUES ('Epinard',11,2000,20,2);
+INSERT INTO regime(nom_regime,objectif,prix,duree,poids) VALUES ('Poissons gras',11,4000,10,1);
+INSERT INTO regime(nom_regime,objectif,prix,duree,poids) VALUES ('Volaille',11,2000,7,1);
+INSERT INTO regime(nom_regime,objectif,prix,duree,poids) VALUES ('Avocats',11,500,4,5);
+INSERT INTO regime(nom_regime,objectif,prix,duree,poids) VALUES ('Viande Rouge',1,3000,6,6);

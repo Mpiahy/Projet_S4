@@ -32,4 +32,8 @@ class Regime_M extends CI_Model {
    $query=$this->db->query($sql);
 
   }
+  public function getRegime($critere)
+  {
+     $sql = "select * from regime where idObjectif = %";
+  }
 }
