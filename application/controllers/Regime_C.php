@@ -20,16 +20,16 @@ class Regime_C extends CI_Controller {
     //ajouter regime
 
     public function ajouter(){
-        $ajout=$this->Regime_M->ajoute($this->input->post('nom_regime'),$this->input->post('prix'),$this->input->post('duree'));
+        $ajout=$this->Regime_M->ajoute($this->input->post('nom_regime'),$this->input->post('objectif'),$this->input->post('prix'),$this->input->post('duree'));
         $data['ajoute']=$ajout;
     }
 
     // modifier redime
 
     public function modifier(){
-        $modife=$this->Regime_M->modifier($this->input->post('nom_regime'),$this->input->post('prix'),$this->input->post('duree'));
+        $modife=$this->Regime_M->modifier($this->input->post('nom_regime'),$this->input->post('objectif'),$this->input->post('prix'),$this->input->post('duree'));
         $data['modifier']=$modife;
-        
+
 
     }
     public function traitement()
