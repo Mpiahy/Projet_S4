@@ -83,9 +83,10 @@ create table portefeuille
 )engine = innoDB;
 INSERT INTO portefeuille (idUtilisateur,vola) VALUES (1,1000);
 INSERT INTO portefeuille (idUtilisateur,vola) VALUES (2,5000);
-create table code 
+create table code
 (
-    id int not null auto_increment,
+    id int primary key auto_increment,
     nombre int,
+    valeur int,
     status int 
 )engine = innoDB;
