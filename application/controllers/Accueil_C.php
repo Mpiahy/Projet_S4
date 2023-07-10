@@ -29,7 +29,7 @@ class Accueil_C extends CI_Controller {
 
 		$data = array();
 		// définition des données variables du template
-		$data['title'] = 'Sakafonao';
+		$data['title'] = 'Accueil';
 		$data['description'] = 'Web Application pour controller son régime alimentaire';
 		$data['keywords'] = 'regime, aliment, saine';
 		$data['autor'] = 'Aina, Manasoa, Mpiahy';
