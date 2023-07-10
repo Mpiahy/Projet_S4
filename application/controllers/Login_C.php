@@ -62,9 +62,9 @@ class Login_C extends CI_Controller {
             if($user != null){
 				if($user['idCon'] == 1)
 				{
-				$this->session->set_userdata('user_id',$user['id']);
-				$id['id']= $this->Login_M->getUsers($email,$password);
-				$this->load->view('accueil',$id);
+					$this->session->set_userdata('user_id',$user['id']);
+					$id['id']= $this->Login_M->getUsers($email,$password);
+					$this->load->view('accueil',$id);
 				}
 
 				else if($user['idCon'] == 2)

@@ -50,13 +50,13 @@
                     <div class="wrap-input100 validate-input m-b-23" data-validate="Email ou Nom D'utilisateur requis">
                         <span class="label-input100">Email </span>
                         <input class="input100" type="text" name="email"
-                            placeholder="Votre Email ...">
+                            placeholder="Votre Email" value="mom@gmail.com">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Mot de passe requis">
                         <span class="label-input100">Mot de passe</span>
-                        <input class="input100" type="password" name="password" placeholder="Votre Mot de passe">
+                        <input class="input100" type="password" name="password" placeholder="Votre Mot de passe" value="1444">
                         <span class="focus-input100" data-symbol="&#xf190;"></span>
                     </div>
 
