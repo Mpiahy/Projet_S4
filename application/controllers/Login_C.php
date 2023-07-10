@@ -62,7 +62,6 @@ class Login_C extends CI_Controller {
             if($user != null){
                 $this->session->set_userdata('user_id',$user['id']);
                 $this->load->view('welcome_message');
-                
             }else{
                 $data['error'] = 'Invalid username or password';
                 $this->load->view('login');
