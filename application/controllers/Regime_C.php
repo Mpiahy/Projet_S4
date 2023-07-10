@@ -37,6 +37,7 @@ class Regime_C extends CI_Controller {
         $poids = $this->input->post('poids');
         $critere = $this->input->post('choix');
         
+        
     }
 
 }
