@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login_M extends CI_Model {
+class Objectif_M extends CI_Model {
 
     //affichier les regime 
     public function liste(){

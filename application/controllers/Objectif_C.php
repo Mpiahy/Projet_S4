@@ -8,5 +8,6 @@ class Objectif_C extends CI_Controller {
     //objectis
      public function objetif(){
         $data=$this->objetif_M->calculer($poids);
+        $this->load->view('',$data);
      }
 }
