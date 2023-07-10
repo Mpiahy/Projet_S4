@@ -64,9 +64,9 @@
                             <tbody>
                                 <tr>
                                     <td><input type="checkbox"></td>
-                                    <td style="font-family: Montserrat, sans-serif;">$nom_regime</td>
-                                    <td style="font-family: Montserrat, sans-serif;">$duree jours</td>
-                                    <td style="font-family: Montserrat, sans-serif;">$prix</td>
+                                    <td style="font-family: Montserrat, sans-serif;"><?php $data['nom_regime']; ?></td>
+                                    <td style="font-family: Montserrat, sans-serif;"><?php $calcule; ?></td>
+                                    <td style="font-family: Montserrat, sans-serif;"><?php $depense; ?></td>
                                 </tr>
                                 <tr></tr>
                             </tbody>
