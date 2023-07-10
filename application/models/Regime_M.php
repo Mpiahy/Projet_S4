@@ -19,16 +19,16 @@ class Regime_M extends CI_Model {
   }
 
   //modifier regime
-  public function modife($nom_regime,$prix,$duree){
+  public function modife($nom_regime,$objectif,$prix,$duree){
    $sql='UPDATE regime set id=%s';
-   $sql=sprintf($sql,$this->db->escape($nom_regime),$this->db->escape($prix),$this->db->escape($duree));
+   $sql=sprintf($sql,$this->db->escape($nom_regime),$this->db->escape($objectif),$this->db->escape($prix),$this->db->escape($duree));
    $query=$this->db->query($sql);
   }
 
   //ajouter regime
-  public function ajoute($nom_regime='',$prix='',$duree=''){
-   $sql='INSERT INTO regime(nom_regime,prix,duree) VALUES (%s,%s,%s)';
-   $sql=sprintf($sql,$this->db->escape($nom_regime),$this->db->escape($prix),$this->db->escape($duree));
+  public function ajoute($nom_regime='',$objectif='',$prix='',$duree=''){
+   $sql='INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES (%s,%s,%s,%s)';
+   $sql=sprintf($sql,$this->db->escape($nom_regime),$this->db->escape($objectif),$this->db->escape($prix),$this->db->escape($duree));
    $query=$this->db->query($sql);
 
   }
