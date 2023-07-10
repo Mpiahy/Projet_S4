@@ -20,14 +20,14 @@
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link link-primary py-3 px-0 px-lg-3 rounded" href="#Wallet">Porte Feuille</a></li>
                 </ul>
             </div>
-            <a class="link-danger py-3 px-0 px-lg-3 rounded" href="#logout" style="font-size: 16px;margin-left: -6px;padding-right: 0px;margin-right: -154px;">Se déconnecter</a>
+            <a class="link-danger py-3 px-0 px-lg-3 rounded" href="<?php echo base_url("Login_C/logOut"); ?>" style="font-size: 16px;margin-left: -6px;padding-right: 0px;margin-right: -154px;">Se déconnecter</a>
         </div>
     </nav>
     <header class="text-center text-white bg-primary masthead">
         <div class="container" style="padding-bottom: 0px;margin-bottom: -66px;padding-top: 0px;margin-top: -62px;padding-right: 12px;"><img class="img-fluid d-block mx-auto mb-5" src="<?php echo base_url('assets/accueil_template/assets/img/profil.png'); ?>" width="104" height="104">
-            <h2>$Username</h2>
+            <h2><?php echo $id['nom']; ?> </h2>
             <hr class="star-light" style="margin-bottom: -6px;">
-            <h2 class="display-2 font-weight-light mb-0">Genre: $Gender<br>Taille: $Height<br>Poids: $Weight</h2>
+            <h2 class="display-2 font-weight-light mb-0">Genre: <?php echo $id['genre'] ;?><br>Taille: <?php echo $id['taille'] ;?><br>Poids: <?php echo $id['poids']; ?></h2>
         </div>
     </header>
     <section id="portfolio" class="portfolio">
@@ -36,19 +36,19 @@
             <hr class="star-dark mb-5">
             <div class="row">
                 <div class="col-md-6 col-lg-4 col-xxl-6"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-5" data-bs-toggle="modal"></a>
-                    <h3 class="text-center">Votre poids:</h3>
+                    <h3 class="text-center">Votre poids: <?php echo $id['poids']; ?> Kg</h3>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xxl-6"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-6" data-bs-toggle="modal"></a>
-                    <h1 class="display-6 text-start" style="font-size: 22px;">$Weight</h1>
-                </div>
+ 
             </div>
-            <form method="post" action="#">
+            <form method="post" action="<?php echo base_url("Accueil_C/traitement");?>">
                 <div class="row">
-                    <div class="col-md-6 col-lg-4 col-xxl-6 offset-xxl-0"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-5" data-bs-toggle="modal"></a>
-                        <h3 class="text-center">Poids voulu:</h3>
+                    <div class="col-md-6 col-lg-4 col-xxl-6 offset-xxl-0">
+                        <a class="d-block mx-auto portfolio-item" href="#portfolio-modal-5" data-bs-toggle="modal"></a>
+                        <h3 class="text-center">Poids </h3>
                     </div>
-                    <div class="col-md-6 col-lg-4 col-xxl-6"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-6" data-bs-toggle="modal"></a>
-                        <input type="text">
+                    <div class="col-md-6 col-lg-4 col-xxl-6">
+                        <a class="d-block mx-auto portfolio-item" href="#portfolio-modal-6" data-bs-toggle="modal"></a>
+                        <input type="text" name ="poids">
                     <div class="col">
                         <button class="btn btn-secondary btn-lg" type="submit" style="text-align: center;margin-top: 32px;margin-right: 166px;padding-right: 30px;padding-left: 30px;padding-top: 10px;padding-bottom: 10px;font-size: 20px;font-family: Montserrat, sans-serif;">Valider</button>
                     </div>

@@ -15,7 +15,7 @@ class Login_M extends CI_Model {
     public function getUsers($email,$password)
     {
         $resultat=array(); 
-        $sql="select id from users where email='%s' and password='%s' ";
+        $sql="select * from users where email='%s' and password='%s' ";
         $sql=sprintf($sql,$email,$password);
         $query=$this->db->query($sql);
         $resultat=$query->row_array();        
