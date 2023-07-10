@@ -54,6 +54,7 @@
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
+                            
                                 <tr>
                                     <th style="padding-right: 0px;padding-left: 0px;">Choix</th>
                                     <th style="font-family: Montserrat, sans-serif;">Aliments</th>
@@ -62,12 +63,14 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            <?php foreach ($resultat as $data): ?>
                                 <tr>
                                     <td><input type="checkbox"></td>
                                     <td style="font-family: Montserrat, sans-serif;"><?php $data['nom_regime']; ?></td>
-                                    <td style="font-family: Montserrat, sans-serif;"><?php $calcule; ?></td>
-                                    <td style="font-family: Montserrat, sans-serif;"><?php $depense; ?></td>
+                                    <td style="font-family: Montserrat, sans-serif;"><?php $data['calcule']; ?></td>
+                                    <td style="font-family: Montserrat, sans-serif;"><?php $data['depense']; ?></td>
                                 </tr>
+                                <?php endforeach ?>
                                 <tr></tr>
                             </tbody>
                         </table>

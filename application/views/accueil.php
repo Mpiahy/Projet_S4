@@ -38,7 +38,7 @@
         </div>
     </header>
     <section id="portfolio" class="portfolio">
-        <form action="<?php echo base_url("Regime_M/traitement")?>" method="post">
+        <form action="<?php echo base_url("Objectif_C/objectif")?>" method="post">
             <div class="container">
                 <h2 class="text-center text-secondary">Votre Objectif</h2>
                 <hr class="star-dark mb-5" />

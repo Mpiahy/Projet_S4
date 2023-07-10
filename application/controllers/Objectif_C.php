@@ -6,9 +6,10 @@ class Objectif_C extends CI_Controller {
 
 
     //objectis
-     public function objetif(){
+     public function objectif(){
         $data=array();
-        $data['resultat']=$this->objetif_M->calculer();
+        $data['resultat']=$this->Objectif_M->calculer();
+
         $this->load->view('proposition',$data);
      }
 }

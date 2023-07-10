@@ -12,7 +12,7 @@ class Objectif_M extends CI_Model {
 
     //calculer la depense selon le poids 
     
-    public function calculer($poids=''){
+    public function calculer(){
         $query=$this->db->query('SELECT * FROM regime');
         $poids=$this->input->post('poids');
         
