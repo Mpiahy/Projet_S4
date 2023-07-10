@@ -26,7 +26,6 @@ class Accueil_C extends CI_Controller {
 	}
 	public function index()
 	{
-
 		$data = array();
 		// définition des données variables du template
 		$data['title'] = 'Accueil';

@@ -44,35 +44,29 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col">
-                        <div class="form-check" style="text-align: center;padding-left: 257px;">
-                            <input id="formCheck-5" class="form-check-input" type="checkbox" />
-                            <label class="form-check-label" for="formCheck-5" style="font-weight: bold;">Augmenter</label>
-                        </div>
+                    <div class="col-xl-2 offset-xl-3" style="padding-left: 0px;padding-right: 0px;padding-top: 22px;padding-bottom: 25px;"><select style="margin-left: 86px;padding-bottom: 7px;padding-top: 7px;">
+                            <optgroup>
+                                <option value="1" selected>Choisir l'opération</option>
+                                <option value="2">Augmenter</option>
+                                <option value="3">Diminuer</option>
+                            </optgroup>
+                        </select></div>
+                    <div class="col-xl-2 offset-xl-0" style="padding-left: 0px;padding-top: 22px;padding-bottom: 25px;padding-right: 35px;">
+                        <h6 class="display-6" style="text-align: center;font-size: 16px;font-style: italic;margin-left: 67px;padding-top: 7px;">de</h6>
                     </div>
-                    <div class="col-xl-4" style="padding-left: 0px;padding-right: 0px;">
-                        <h6 class="display-6" style="text-align: center;font-size: 20px;margin-left: 0px;padding-left: 149px;padding-right: 152px;">ou</h6>
+                    <div class="col-xl-2 offset-xl-0" style="padding-left: 0px;padding-right: 0px;padding-top: 22px;padding-bottom: 25px;margin-left: 0px;">
+                        <input type="number" />
                     </div>
-                    <div class="col" style="text-align: center;">
-                        <div class="form-check" style="padding-right: 250px;">
-                        <input id="formCheck-6" class="form-check-input" type="checkbox" />
-                        <label class="form-check-label" for="formCheck-6" style="font-weight: bold;">Diminuer</label>
-                    </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col" style="padding-left: 0px;">
-                        <h6 class="display-6" style="text-align: right;font-size: 16px;padding-top: 5px;font-style: italic;">de</h6>
-                    </div>
-                    <div class="col" style="padding-left: 0px;margin-right: -278px;padding-right: 0px;">
-                        <input type="number" name="Poids" >
-                    </div>
-                    <div class="col" style="padding-left: 0px;">
+                    <div class="col-xl-2 offset-xl-0" style="padding-left: 0px;padding-right: 0px;padding-top: 22px;padding-bottom: 25px;">
                         <h6 class="display-6" style="text-align: left;font-size: 16px;margin-left: 6px;padding-top: 5px;font-style: italic;">Kg</h6>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="col offset-xl-9" style="padding-left: 0px;">
+            <button class="btn btn-info" type="submit" style="margin-top: 23px;">Valider</button>
+        </div>
+        </form>
     </section>
     <footer class="text-center footer" style="padding-top: 20px;margin-bottom: -82px;">
         <div class="container">
