@@ -14,17 +14,11 @@ class Objectif_M extends CI_Model {
     
     public function calculer($poids=''){
         $query=$this->db->query('SELECT * FROM regime');
-        $data=$this->db->query('SELECT * FROM objectif ');
+        $poids=$this->input->post('poids');
         
         $calcule=$query['poids'] * $query['duree'] / $poids ;
         $depense=$query['prix']*$calcule;
         
-        //inserer regime_users(nom_regime,prix,dure,poids)
-        
-        $insertQuery = "INSERT INTO regime_users (nom_regime, poids, duree,prix ) 
-        VALUES ('".$data['nom_regime']."', '".$data['poids']."',   '".$calcule."', '".$depense."')";
-
-        $this->db->query($insertQuery);
 
     }
 }
