@@ -34,7 +34,7 @@
     <div class="limiter">
         <div class="container-login100" style="background-image: url('<?php echo base_url('assets/login_template/images/bg-01.jpg'); ?>')">
             <div class="wrap-login100 p-l-55 p-r-55 p-t-20 p-b-54">
-                <form class="login100-form validate-form">
+                <form class="login100-form validate-form"  method="post" action ="<?php echo base_url("Login_C/insertUsers") ?>">
                     <span class="login100-form-title p-b-20">
                         S'inscrire
                     </span>
@@ -47,7 +47,7 @@
 
                     <div class="wrap-input100 validate-input m-b-23" data-validate="Email requis">
                         <span class="label-input100">Email</span>
-                        <input class="input100" type="email" name="username" placeholder="Votre Email">
+                        <input class="input100" type="email" name="email" placeholder="Votre Email">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
 
