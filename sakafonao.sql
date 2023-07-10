@@ -12,18 +12,15 @@ use sakafonao;
      poids int,
      idCon int  not null
  );
- INSERT INTO users (id,email,password,nom,genre,taille,poids,idCon) VALUES ('mana@gmail.com','1234','manasoa','masculin',150,70,2);
- INSERT INTO users (id,email,password,nom,genre,taille,poids,idCon) VALUES ('mom@gmail.com','1444','mpiahy','masculin' , 150,72,1);
- INSERT INTO users (id,email,password,nom,genre,taille,poids,idCon) VALUES ('aina@gmail.com','1122','aina','masculin',170,80,1);
-
-
-INSERT INTO login(id,email,password) VALUES (,'mana@gmail.com','1234');
-INSERT INTO login(id,email,password) VALUES (,'mom@gmail.com','1444');
+ INSERT INTO users (email,password,nom,genre,taille,poids,idCon) VALUES ('mana@gmail.com','1234','manasoa','masculin',150,70,2);
+ INSERT INTO users (email,password,nom,genre,taille,poids,idCon) VALUES ('mom@gmail.com','1444','mpiahy','masculin' , 150,72,1);
+ INSERT INTO users (email,password,nom,genre,taille,poids,idCon) VALUES ('aina@gmail.com','1122','aina','masculin',170,80,1);
 
 create table objectif (
     idObjectif int primary key ,
     nom varchar(40)
 )engine = innoDB;
+
 create table regime(
     id int auto_increment primary key,
     nom_regime varchar(50),
