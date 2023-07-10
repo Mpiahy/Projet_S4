@@ -55,27 +55,38 @@ class Login_C extends CI_Controller {
 	
     public function traiteLogin()
     {
-          $id = array();
-          $email = $this->input->post('email');
-          $password = $this->input->post('password');
-          $user= $this->Login_M->getUsers($email,$password);
-            if($user != null){
-				if($user['idCon'] == 1)
-				{
-					$this->session->set_userdata('user_id',$user['id']);
-					$id['id']= $this->Login_M->getUsers($email,$password);
-					$this->load->view('accueil',$id);
-				}
+		$data = array();
+		// définition des données variables du template
+		$data['title'] = 'Accueil';
+		$data['description'] = 'Web Application pour controller son régime alimentaire';
+		$data['keywords'] = 'regime, aliment, saine';
+		$data['autor'] = 'Aina, Manasoa, Mpiahy';
 
-				else if($user['idCon'] == 2)
-				{
-					$this->load->view('welcome_message',$user);
-
-				}
-            }else{
-                $data['error'] = 'Invalid username or password';
-                $this->load->view('login');
+		
+		$id = array();
+		$email = $this->input->post('email');
+		$password = $this->input->post('password');
+		$user= $this->Login_M->getUsers($email,$password);
+		
+        
+		if($user != null){
+			if($user['idCon'] == 1)
+			{
+				$this->session->set_userdata('user_id',$user['id']);
+				$id['id']= $this->Login_M->getUsers($email,$password);
+				$variable = array_merge($data, $id);
+				$this->load->view('accueil',$variable);
 			}
+			
+			else if($user['idCon'] == 2)
+			{
+				$variable = array_merge($data, $user);
+				$this->load->view('welcome_message',$variable);
+			}
+        }else{
+            $data['error'] = 'Invalid username or password';
+            $this->load->view('login');
+		}
 	}
 	public function insertUsers()
     {
