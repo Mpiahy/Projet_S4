@@ -9,13 +9,12 @@ use sakafonao;
      nom varchar(50),
      genre varchar(30),
      taille int,
-     poids int
+     poids int,
+     idCon int  not null
  );
- INSERT INTO users (id,email,password,nom,genre,taille,poids) VALUES (,'mana@gmail.com','1234','manasoa','masculin',150,70);
- INSERT INTO users (id,email,password,nom,genre,taille,poids) VALUES (,'mom@gmail.com','1444','mpiahy','masculin' , 150,72);
- INSERT INTO users (id,email,password,nom,genre,taille,poids) VALUES (,'aina@gmail.com','1122','aina','masculin',170,80);
-
-drop database sakafonao; 
+ INSERT INTO users (id,email,password,nom,genre,taille,poids,idCon) VALUES ('mana@gmail.com','1234','manasoa','masculin',150,70,2);
+ INSERT INTO users (id,email,password,nom,genre,taille,poids,idCon) VALUES ('mom@gmail.com','1444','mpiahy','masculin' , 150,72,1);
+ INSERT INTO users (id,email,password,nom,genre,taille,poids,idCon) VALUES ('aina@gmail.com','1122','aina','masculin',170,80,1);
 
 create table login(
     id int auto_increment primary key,
