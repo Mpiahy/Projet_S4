@@ -21,7 +21,7 @@ create table login(
     id int auto_increment primary key,
     email varchar(50),
     password varchar(50)
-);
+)engine = innoDB;
 
 INSERT INTO login(id,email,password) VALUES (,'mana@gmail.com','1234');
 INSERT INTO login(id,email,password) VALUES (,'mom@gmail.com','1444');
@@ -30,17 +30,25 @@ INSERT INTO login(id,email,password) VALUES (,'mom@gmail.com','1444');
 create table regime(
     id int auto_increment primary key,
     nom_regime varchar(50),
+    objectif int ,
     prix int ,
-    duree date
-);
-INSERT INTO regime(id,nom_regime,prix,duree) VALUES (,'LEGUME',2000,1231);
-INSERT INTO regime(id,nom_regime,prix,duree) VALUES (,'PROTEINE',4000,);
-INSERT INTO regime(id,nom_regime,prix,duree) VALUES (,'FRUITS',2000,);
-INSERT INTO regime(id,nom_regime,prix,duree) VALUES (,'GLUCIDE',1000,);
-INSERT INTO regime(id,nom_regime,prix,duree) VALUES (,'NOIX',2000,);
-INSERT INTO regime(id,nom_regime,prix,duree) VALUES (,'Epinard',2000,);
-INSERT INTO regime(id,nom_regime,prix,duree) VALUES (,'Poissons gras',4000,);
-INSERT INTO regime(id,nom_regime,prix,duree) VALUES (,'Volaille',2000,);
-INSERT INTO regime(id,nom_regime,prix,duree) VALUES (,'Avocats',500,);
-INSERT INTO regime(id,nom_regime,prix,duree) VALUES (,'Viande Rouge',3000,);
+    duree int,
+    FOREIGN KEY (objectif) REFERENCES objectif(idObjectif)
+)engine = innoDB;
+create table objectif (
+    idObjectif int primary key ,
+    nom varchar(40)
+)engine = innoDB;
+INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('LEGUME',1,2000,5);
+INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('PROTEINE',1,4000,4);
+INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('FRUITS',1,2000,7);
+INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('GLUCIDE',0,1000,6);
+INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('NOIX',0,2000,15);
+INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('Epinard',0,2000,20);
+INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('Poissons gras',0,4000,10);
+INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('Volaille',0,2000,7);
+INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('Avocats',0,500,4);
+INSERT INTO regime(nom_regime,objectif,prix,duree) VALUES ('Viande Rouge',1,3000,6);
 
+INSERT INTO objectif(idObjectif,nom) VALUES (1,'Mampihena');
+INSERT INTO objectif(idObjectif,nom) VALUES (11,'Mampitombo');
