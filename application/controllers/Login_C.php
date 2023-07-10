@@ -58,21 +58,19 @@ class Login_C extends CI_Controller {
           $id = array();
           $email = $this->input->post('email');
           $password = $this->input->post('password');
-          $user['id']= $this->Login_M->getUsers($email,$password);
+          $user= $this->Login_M->getUsers($email,$password);
             if($user != null){
 				if($user['idCon'] == 1)
 				{
-                $this->session->set_userdata('user_id',$user['id']);
-				$this->load->view('accueil',$user);
+				$this->session->set_userdata('user_id',$user['id']);
+				$id['id']= $this->Login_M->getUsers($email,$password);
+				$this->load->view('accueil',$id);
 				}
-<<<<<<< Updated upstream
+
 				else if($user['idCon'] == 2)
 				{
-					$this->load->view('admin',$user);
-=======
-				else if($user['idCon']==2){
-					$this->session->set_userdata('user_id',$user['id']);
->>>>>>> Stashed changes
+					$this->load->view('welcome_message',$user);
+
 				}
             }else{
                 $data['error'] = 'Invalid username or password';
