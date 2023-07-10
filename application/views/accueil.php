@@ -31,15 +31,58 @@
         </div>
     </header>
     <section id="portfolio" class="portfolio">
+<<<<<<< Updated upstream
         <div class="container" style="padding-top: 0px;margin-top: -62px;margin-bottom: -70px;">
             <h3 class="text-uppercase text-center text-secondary">Votre objectif</h3>
             <hr class="star-dark mb-5">
             <div class="row">
                 <div class="col-md-6 col-lg-4 col-xxl-6"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-5" data-bs-toggle="modal"></a>
                     <h3 class="text-center">Votre poids: <?php echo $id['poids']; ?> Kg</h3>
+=======
+        <form action="#" method="post">
+            <div class="container">
+                <h2 class="text-center text-secondary">Votre Objectif</h2>
+                <hr class="star-dark mb-5" />
+                <div class="row">
+                    <div class="col" style="padding-left: 0px;">
+                        <h6 class="display-6" style="text-align: right;font-size: 20px;font-weight: bold;">Votre poids:</h6>
+                    </div>
+                    <div class="col" style="padding-left: 0px;text-align: left;margin-bottom: 9px;padding-bottom: 0px;">
+                        <h6 class="display-6" style="text-align: left;font-size: 20px;margin-bottom: 0px;padding-left: 25px;">$Weight</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-check" style="text-align: center;padding-left: 257px;">
+                            <input id="formCheck-5" class="form-check-input" type="checkbox" />
+                            <label class="form-check-label" for="formCheck-5" style="font-weight: bold;">Augmenter</label>
+                        </div>
+                    </div>
+                    <div class="col-xl-4" style="padding-left: 0px;padding-right: 0px;">
+                        <h6 class="display-6" style="text-align: center;font-size: 20px;margin-left: 0px;padding-left: 149px;padding-right: 152px;">ou</h6>
+                    </div>
+                    <div class="col" style="text-align: center;">
+                        <div class="form-check" style="padding-right: 250px;">
+                        <input id="formCheck-6" class="form-check-input" type="checkbox" />
+                        <label class="form-check-label" for="formCheck-6" style="font-weight: bold;">Diminuer</label>
+                    </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="padding-left: 0px;">
+                        <h6 class="display-6" style="text-align: right;font-size: 16px;padding-top: 5px;font-style: italic;">de</h6>
+                    </div>
+                    <div class="col" style="padding-left: 0px;margin-right: -278px;padding-right: 0px;">
+                        <input type="number" name="Poids" id="">
+                    </div>
+                    <div class="col" style="padding-left: 0px;">
+                        <h6 class="display-6" style="text-align: left;font-size: 16px;margin-left: 6px;padding-top: 5px;font-style: italic;">Kg</h6>
+                    </div>
+>>>>>>> Stashed changes
                 </div>
  
             </div>
+<<<<<<< Updated upstream
             <form method="post" action="<?php echo base_url("Accueil_C/traitement");?>">
                 <div class="row">
                     <div class="col-md-6 col-lg-4 col-xxl-6 offset-xxl-0">
@@ -54,6 +97,12 @@
                     </div>
                 </div>
             </form>
+=======
+            <div class="col offset-xl-9" style="padding-left: 0px;">
+                <button class="btn btn-info" type="submit" style="margin-top: 23px;">Valider</button>
+            </div>
+        </form>
+>>>>>>> Stashed changes
         </div>
     </section>
     <footer class="text-center footer" style="padding-top: 20px;margin-bottom: -82px;">
