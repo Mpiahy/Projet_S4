@@ -12,9 +12,10 @@ use sakafonao;
      poids int,
      idCon int  not null
  );
- INSERT INTO users (email,password,nom,genre,taille,poids,idCon) VALUES ('mana@gmail.com','1234','manasoa','masculin',150,70,1);
- INSERT INTO users (email,password,nom,genre,taille,poids,idCon) VALUES ('mom@gmail.com','1444','mpiahy','masculin' , 150,72,0);
- INSERT INTO users (email,password,nom,genre,taille,poids,idCon) VALUES ('aina@gmail.com','1122','aina','masculin',170,80,0);
+ INSERT INTO users (email,password,nom,genre,taille,poids,idCon) VALUES ('mana@gmail.com','1234','manasoa','homme',150,70,1);
+ INSERT INTO users (email,password,nom,genre,taille,poids,idCon) VALUES ('mom@gmail.com','1444','mpiahy','homme' , 150,72,0);
+ INSERT INTO users (email,password,nom,genre,taille,poids,idCon) VALUES ('aina@gmail.com','1122','aina','homme',170,80,0);
+ INSERT INTO users (email,password,nom,genre,taille,poids,idCon) VALUES ('anjely@gmail.com','1122','angel','femme',160,50,0);
 
 create table objectif (
     idObjectif int primary key ,
