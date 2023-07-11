@@ -18,7 +18,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive" style="padding-right: 0px;">
                 <picture><img src="<?php echo base_url('assets/accueil_template/assets/img/default-removebg-preview.png'); ?>" style="margin-bottom: -190px;margin-top: -188px;padding-bottom: 0px;padding-right: 0px;margin-right: 0px;" width="336" height="309"></picture>
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link link-primary py-3 px-0 px-lg-3 rounded" href="#accueil">Accueil</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link link-primary py-3 px-0 px-lg-3 rounded" href="<?php echo base_url("Accueil_C/index"); ?>">Accueil</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link link-primary py-3 px-0 px-lg-3 rounded" href="<?php echo base_url("Admin_C/index"); ?>">Admin</a></li>
                 </ul>
             </div>
@@ -27,7 +27,7 @@
     </nav>
     <header class="text-center text-white bg-primary masthead">
         <div class="container" style="padding-bottom: 0px;margin-bottom: -66px;padding-top: 0px;margin-top: -62px;padding-right: 12px;"><img class="img-fluid d-block mx-auto mb-5" src="<?php echo base_url('assets/accueil_template/assets/img/profil.png'); ?>" width="104" height="104">
-            <h2><?php echo $id['nom']; ?> </h2>
+            <h2><?php echo $user['nom']; ?> </h2>
            
         </div>
     </header>
@@ -42,7 +42,9 @@
                     <h3 style="text-align: right;">Votre solde:</h3>
                 </div>
                 <div class="col-md-6">
-                    <h6 class="display-6" style="text-align: left;font-size: 24px;padding-top: 2px;"><?php echo $id['vola'] ; ?></h6>
+                    <?php foreach ($vola as $row): ?>
+                    <h6 class="display-6" style="text-align: left;font-size: 24px;padding-top: 2px;"><?php echo $row['vola']; ?></h6>
+                    <?php endforeach ?>
                 </div>
             </div>
         </div>
@@ -55,7 +57,7 @@
                     <div class="col-md-4 col-xxl-3">
                         <input id="codeRecharge" name="codeRecharge" type="number" style="font-family: Montserrat, sans-serif;width: 240.17px;padding-top: 9px;margin-bottom: -2px;height: 27.967px;margin-top: 1px;">
                     </div>
-                    <input type = "hidden" name ="id" value ="<?php echo $id['id']; ?>"
+                    <input type = "hidden" name ="id" value ="<?php echo $user['id']; ?>"
                     <div class="col-md-4" style="padding-bottom: 0px;padding-top: 0px;margin-top: -10px;">
                         <button class="btn btn-secondary" data-bss-hover-animate="pulse" type="submit" style="font-family: Montserrat, sans-serif;width: 115.1132px;height: 32.9906px;margin-bottom: 9px;padding-bottom: 30px;">
                         Recharger</button>

@@ -22,23 +22,21 @@
                 </picture>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link link-primary py-3 px-0 px-lg-3 rounded" href="<?php echo base_url("Admin_C/index"); ?>">Admin</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link link-primary py-3 px-0 px-lg-3 rounded" href="<?php echo base_url("Argent_C/index/".$idUser) ;?>">Porte Feuille</a></li>
-
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link link-primary py-3 px-0 px-lg-3 rounded" href="<?php echo base_url("Argent_C/index") ;?>">Porte Feuille</a></li>
                 </ul>
-                <h2><?php echo $idUser ; ?></h2>
             </div>
             <a class="link-danger py-3 px-0 px-lg-3 rounded" href="<?php echo base_url("Login_C/logOut"); ?>" style="font-size: 16px;margin-left: -6px;padding-right: 0px;margin-right: -154px;">Se déconnecter</a>
         </div>
     </nav>
     <header class="text-center text-white bg-primary masthead">
         <div class="container" style="padding-bottom: 0px;margin-bottom: -66px;padding-top: 0px;margin-top: -62px;padding-right: 12px;"><img class="img-fluid d-block mx-auto mb-5" src="<?php echo base_url('assets/accueil_template/assets/img/profil.png'); ?>" width="104" height="104">
-            <h2><?php echo $id['nom']; ?> </h2>
+            <h2><?php echo $user['nom']; ?> </h2>
             <hr class="star-light" style="margin-bottom: -6px;">
-            <h2 class="display-2 font-weight-light mb-0">Genre: <?php echo $id['genre'] ;?><br>Taille: <?php echo $id['taille'] ;?><br>Poids: <?php echo $id['poids']; ?></h2>
+            <h2 class="display-2 font-weight-light mb-0">Genre: <?php echo $user['genre'] ;?><br>Taille: <?php echo $user['taille'] ;?><br>Poids: <?php echo $user['poids']; ?></h2>
         </div>
     </header>
     <form action = "<?php echo base_url("Argent_C/traitement") ?>">
-        <input type ="hidden" name ="idUs" value="<?php echo $idUser ;?>" >
+        <input type ="hidden" name ="idUs" value="<?php echo $user['id'] ;?>" >
     </form>
     <section id="portfolio" class="portfolio">
         <form action="<?php echo base_url("Objectif_C/objectif")?>" method="post">
@@ -50,7 +48,7 @@
                         <h6 class="display-6" style="text-align: right;font-size: 20px;font-weight: bold;">Votre poids:</h6>
                     </div>
                     <div class="col" style="padding-left: 0px;text-align: left;margin-bottom: 9px;padding-bottom: 0px;">
-                        <h6 class="display-6" style="text-align: left;font-size: 20px;margin-bottom: 0px;padding-left: 25px;"><?php echo $id['poids']; ?> Kg</h6>
+                        <h6 class="display-6" style="text-align: left;font-size: 20px;margin-bottom: 0px;padding-left: 25px;"><?php echo $user['poids']; ?> Kg</h6>
                     </div>
                 </div>
                 <div class="row">

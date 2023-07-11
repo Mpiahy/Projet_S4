@@ -13,9 +13,9 @@ class Accueil_C extends CI_Controller {
     }
     public function index()
     {
-        $session_data = $this->Accueil_C->get_session_data();
         $data = array();
-        $data['id'] = $this->Accueil_M->getUsers($session_data);
-        $this->load->view('accueil',$data);
+        $data['user'] = $this->session->user;
+        $data['content'] = 'Accueil';
+        $this->load->view('template', $data);
     }
 }
