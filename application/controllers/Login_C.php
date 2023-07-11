@@ -55,27 +55,13 @@ class Login_C extends CI_Controller {
 	
     public function traiteLogin()
     {
-          $id = array();
-          $email = $this->input->post('email');
-          $password = $this->input->post('password');
-          $user= $this->Login_M->getUsers($email,$password);
-            if($user != null){
-				if($user['idCon'] == 1)
-				{
-					$this->session->set_userdata('user_id',$user['id']);
-					$id['id']= $this->Login_M->getUsers($email,$password);
-					$this->load->view('accueil',$id);
-				}
-
-				else if($user['idCon'] == 2)
-				{
-					$this->load->view('welcome_message',$user);
-
-				}
-            }else{
-                $data['error'] = 'Invalid username or password';
-                $this->load->view('login');
-			}
+		$user = $this->Login_M->check_user($this->input->post('email'), $this->input->post('password'));
+		if (count($user) > 0) {
+			$this->session->set_userdata('user', $user[0]);
+			redirect(base_url('index.php/Accueil_C'));
+		} else {
+			redirect(base_url('index.php/Login_C'));
+		}
 	}
 	public function insertUsers()
     {

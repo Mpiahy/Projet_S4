@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -30,8 +30,14 @@ class Login_M extends CI_Model {
         return $query->result_array();
     }
 
-   
 
+    public function check_user($user_email = '', $user_mdp = '')
+    {
+        $sql = 'SELECT * FROM users WHERE email = %s AND password = %s';
+        $sql = sprintf($sql, $this->db->escape($user_email), $this->db->escape($user_mdp));
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
 
 }
      
