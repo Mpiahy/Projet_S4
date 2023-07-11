@@ -38,13 +38,10 @@ class Argent_C extends CI_Controller {
             $code=$resultat['nombre'] ;
             $valeur = $resultat['valeur'] ;
             $this->Argent_M->insertion($id,$code,$valeur);
-            $this->load->view('porte_feuille',$resultat);
+            redirect('Accueil_C/index');
         }else if($resultat['status'] == 1){
             echo "votre code est invalide";
-            $this->load->view('porte_feuille',$resultat);
-            
+            redirect('Argent_C/index');
         }
-
     }
-
 }

@@ -87,6 +87,7 @@
                                 </tr>
                                     
                                 <?php endforeach ?>
+
                                 <tr></tr>
                             </tbody>
                         </table>
@@ -160,7 +161,7 @@
                     <h6 class="display-6 text-center" style="font-size: 22px;">$user</h6>
                 </div>
                 <div class="col-md-4 col-xxl-3">
-                    <h6 class="display-6 text-end" style="font-size: 22px;"><?php echo $vola['id']; ?></h6>
+                    <h6 class="display-6 text-end" style="font-size: 22px;"><?php //echo $vola['id']; ?></h6>
                 </div>
                 <div class="col-md-4 col-xxl-3">
                     <h6 class="display-6 text-end" style="font-size: 22px;">$valeur Ar</h6>
