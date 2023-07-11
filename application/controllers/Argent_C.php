@@ -14,8 +14,6 @@ class Argent_C extends CI_Controller {
     }
     public function index($idUser)
     {
-      
-        
         $data = array();
         $data['vola'] = $this->Argent_M->getVola($idUser);
         $data['id']= $this->Argent_M->getUsers($idUser);
@@ -23,17 +21,21 @@ class Argent_C extends CI_Controller {
     }
     public function traitement()
     {
-        $id = $this->input->post('idUs');
+        
         $resultat = array();
+        $id = $this->input->post('id');
         $code = $this->input->post('codeRecharge');
+        $resultat['id'] = $this->Argent_M->getVola($id);
         $resultat = $this->Argent_M->verification($code);
         if($resultat['status'] == 0)
         {
-            $this->Argent_M->insertion(1,$resultat['code'],$resultat['valeur']);
-            $this->load->view('accueil');
+            $code=$resultat['nombre'] ;
+            $valeur = $resultat['valeur'] ;
+            $this->Argent_M->insertion($id,$code,$valeur);
+            $this->load->view('porte_feuille',$resultat);
         }else if($resultat['status'] == 1){
             echo "votre code est invalide";
-            $this->load->view('accueil',$data);
+            $this->load->view('porte_feuille',$resultat);
             
         }
 
