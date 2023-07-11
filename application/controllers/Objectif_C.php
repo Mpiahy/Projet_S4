@@ -18,6 +18,7 @@ class Objectif_C extends CI_Controller {
       $data['resultat'] = $this->Objectif_M->calculer();
 
       $this->load->view('proposition', $data);
+      
    }
 
 }

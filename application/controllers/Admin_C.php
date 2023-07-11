@@ -23,11 +23,12 @@ class Admin_C extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Admin_M');
+		$this->load->model('Regime_M');
        
 	}
 	public function index()
 	{
-
+            
 		$data = array();
 		// définition des données variables du template
 		$data['title'] = 'Admin';
@@ -37,5 +38,20 @@ class Admin_C extends CI_Controller {
 
 		$this->load->view('admin', $data);
 	}
+	public function affiche()
+   {
+      $this->load->model('Objectif_M');
+      $data = array();
+      $data['data'] = $this->Objectif_M->calculer();
+
+      $this->load->view('admin', $result);
+      
+   }
+   public function liste_regime()
+   {
+	   $data = array();
+	   $data['nom_regime'] = $this->Regime_M->getListe();
+	   $this->load->view('admin',$data);
+   }
 
 }

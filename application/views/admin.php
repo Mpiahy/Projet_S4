@@ -75,13 +75,15 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            <?php foreach ($data as $valiny): ?>
                                 <tr>
-                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;">$nom_regime</td>
-                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;">$durée jours</td>
-                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;">$prix ariary</td>
+                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;"><?php echo $valiny->nom_regime; ?></td>
+                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;"><?php echo $valiny->calcule; ?></td>
+                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;"><?php echo $valiny->depense; ?></td>
                                     <td style="text-align: center;"><button class="btn btn-info" data-bss-hover-animate="flash" type="button" style="font-family: Montserrat, sans-serif;font-size: 14px;">Modifier</button></td>
-                                    <td style="text-align: center;"><button class="btn btn-danger" data-bss-hover-animate="flash" type="button" style="font-family: Montserrat, sans-serif;font-size: 14px;">Supprimer</button></td>
+                                    <td style="text-align: center;"><button class="btn btn-danger" data-bss-hover-animate="flash" type="button" onclick="supprimerRegime($id_regime)" style="font-family: Montserrat, sans-serif;font-size: 14px;">Supprimer</button></td>
                                 </tr>
+                                <?php endforeach ?>
                                 <tr></tr>
                             </tbody>
                         </table>
@@ -98,13 +100,18 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <? php foreach($nom_regime as $nom) ; { ?>
+                                
                                 <tr>
-                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;">$nom_sport</td>
+                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;"><?php echo $nom['nom'] ; ?></td>
                                     <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;">$durée jours</td>
                                     <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;">$frais ariary</td>
-                                    <td style="text-align: center;"><button class="btn btn-info" data-bss-hover-animate="flash" type="button" style="font-family: Montserrat, sans-serif;font-size: 14px;">Modifier</button></td>
+                                    <td style="text-align: center;">
+                                    <a href="<?php echo base_url('Regime_M/delete/') ?>">
+                                    <button class="btn btn-info" data-bss-hover-animate="flash" type="button" style="font-family: Montserrat, sans-serif;font-size: 14px;">Modifier</button></a></td>
                                     <td style="text-align: center;"><button class="btn btn-danger" data-bss-hover-animate="flash" type="button" style="font-family: Montserrat, sans-serif;font-size: 14px;">Supprimer</button></td>
                                 </tr>
+                                <? php } ?>
                                 <tr></tr>
                             </tbody>
                         </table>

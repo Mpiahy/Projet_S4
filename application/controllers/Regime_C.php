@@ -9,26 +9,41 @@ class Regime_C extends CI_Controller {
 		$this->load->model('Regime_M');
 		
 	}
-
+    public function liste_regime()
+    {
+        $data = array();
+        $data['nom_regime'] = $this->Regime_M->getListe();
+        $this->$load->view('admin',$data);
+    }
     //supprimer regime
     public function delete($id){
         $data=array();
         $data['suppprimer']=$this->Regime_M->supprimer($id);
-        $this->load->view();
+        $this->load->view('admin',$data);
     }
-
+    
     //ajouter regime
-
+    
     public function ajouter(){
-        $ajout=$this->Regime_M->ajoute($this->input->post('nom_regime'),$this->input->post('objectif'),$this->input->post('prix'),$this->input->post('duree'));
+        $nom = $this->input->post('nom_regime');
+        $objectif = $this->input->post('objectif');
+        $prix = $this->input->post('prix');
+        $duree = $this->input->post('duree');
+        $ajout=$this->Regime_M->ajoute($nom,$objectif,$prix,$duree);
         $data['ajoute']=$ajout;
+        $this->load->view('admin',$data);
     }
-
+    
     // modifier redime
 
     public function modifier(){
-        $modife=$this->Regime_M->modifier($this->input->post('nom_regime'),$this->input->post('objectif'),$this->input->post('prix'),$this->input->post('duree'));
-        $data['modifier']=$modife;
+        $nom = $this->input->post('nom_regime');
+        $objectif = $this->input->post('objectif');
+         $prix =   $this->input->post('prix');
+         $duree  = $this->input->post('duree')
+        $this->Regime_M->modifier($nom,$objectif,$prix,$duree);
+        
+        $this->load->view('admin');
 
 
     }
