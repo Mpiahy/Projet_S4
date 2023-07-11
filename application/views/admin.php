@@ -86,7 +86,7 @@
                                     <td style="text-align: center;"><button class="btn btn-danger" data-bss-hover-animate="flash" type="button" onclick="supprimerRegime($id_regime)" style="font-family: Montserrat, sans-serif;font-size: 14px;"><?php base_url('Regime_M/delete') ;?>Supprimer</button></td>
                                 </tr>
                                     
-                                <?php }?>
+                                <?php endforeach ?>
                                 <tr></tr>
                             </tbody>
                         </table>

@@ -40,7 +40,7 @@ class Regime_C extends CI_Controller {
         $nom = $this->input->post('nom_regime');
         $objectif = $this->input->post('objectif');
          $prix =   $this->input->post('prix');
-         $duree  = $this->input->post('duree');
+         $duree  = $this->input->post('duree')
         $this->Regime_M->modifier($nom,$objectif,$prix,$duree);
         
         $this->load->view('admin');

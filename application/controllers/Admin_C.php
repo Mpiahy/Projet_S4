@@ -20,6 +20,11 @@ class Admin_C extends CI_Controller {
 	 */
 
 
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('Admin_M');
+	}
 	public function index()
 	{
         
@@ -35,5 +40,4 @@ class Admin_C extends CI_Controller {
 
 		$this->load->view('admin', $data);
 	}
-
 }

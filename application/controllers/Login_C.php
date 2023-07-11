@@ -55,41 +55,12 @@ class Login_C extends CI_Controller {
 	
     public function traiteLogin()
     {
-		$data = array();
-		// définition des données variables du template
-		$data['title'] = 'Accueil';
-		$data['description'] = 'Web Application pour controller son régime alimentaire';
-		$data['keywords'] = 'regime, aliment, saine';
-		$data['autor'] = 'Aina, Manasoa, Mpiahy';
-
-		
-		$id = array();
-		$email = $this->input->post('email');
-		$password = $this->input->post('password');
-		$user= $this->Login_M->getUsers($email,$password);
-		
-        
-		if($user != null){
-			if($user['idCon'] == 0)
-			{
-				$this->session->set_userdata('user_id',$user['id']);
-				$id['idUser'] = $this->session->userdata('user_id');
-				$id['id']= $this->Login_M->getUsers($email,$password);
-				$variable = array_merge($data,$id);
-				$this->load->view('accueil',$variable);
-				$this->load->library('Accueil_C');
-				$this->Accueil_C->set_session_data($id);
-				redirect('Accueil_C/index');
-			}
-			
-			else if($user['idCon'] == 1)
-			{
-				$variable = array_merge($data, $user);
-				$this->load->view('admin',$variable);
-			}
-        }else{
-            $data['error'] = 'Invalid username or password';
-            $this->load->view('login');
+		$user = $this->Login_M->check_user($this->input->post('email'), $this->input->post('password'));
+		if (count($user) > 0) {
+			$this->session->set_userdata('user', $user[0]);
+			redirect(base_url('index.php/Accueil_C'));
+		} else {
+			redirect(base_url('index.php/Login_C'));
 		}
 	}
 	public function insertUsers()
