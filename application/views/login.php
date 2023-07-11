@@ -50,7 +50,7 @@
                     <div class="wrap-input100 validate-input m-b-23" data-validate="Email ou Nom D'utilisateur requis">
                         <span class="label-input100">Email </span>
                         <input class="input100" type="text" name="email"
-                            placeholder="Votre Email" value="mom@gmail.com">
+                            placeholder="Votre Email" value="test@gmail.com">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
 

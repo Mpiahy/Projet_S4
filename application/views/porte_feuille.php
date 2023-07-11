@@ -62,9 +62,30 @@
                         <button class="btn btn-secondary" data-bss-hover-animate="pulse" type="submit" style="font-family: Montserrat, sans-serif;width: 115.1132px;height: 32.9906px;margin-bottom: 9px;padding-bottom: 30px;">
                         Recharger</button>
                     </div>
+                        <?php
+                        // Afficher le message d'erreur s'il existe
+                        if ($this->session->flashdata('error')) {
+                            echo '<div class="error-message" style="color:red;">' . $this->session->flashdata('error') . '</div>';
+                        }
+                        ?>
+
                 </div>
             </form>
         </div>
+
+        <h3>Liste des codes de recharges</h3>
+        <ul>
+            <li>4256</li>
+            <li>4257</li>
+            <li>4258</li>
+            <li>4259</li>
+            <li style="color: red;">4260</li>
+            <li>4261</li>
+            <li>4262</li>
+            <li>4263</li>
+            <li>4264</li>
+            <li>4265</li>
+        </ul>
     </section>
 
     <footer class="text-center footer" style="padding-top: 20px;margin-bottom: -82px;">
