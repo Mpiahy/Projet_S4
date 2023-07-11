@@ -33,13 +33,13 @@ class Argent_C extends CI_Controller {
         $code = $this->input->post('codeRecharge');
         $resultat['id'] = $this->Argent_M->getVola($id);
         $resultat = $this->Argent_M->verification($code);
-        if($resultat['status'] == 0)
+        if($resultat['nombre'] == $code)
         {
             $code=$resultat['nombre'] ;
             $valeur = $resultat['valeur'] ;
             $this->Argent_M->insertion($id,$code,$valeur);
-            redirect('Accueil_C/index');
-        }else if($resultat['status'] == 1){
+            redirect('Argent_C/index');
+        }else {
             echo "votre code est invalide";
             redirect('Argent_C/index');
         }

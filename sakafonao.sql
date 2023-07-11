@@ -93,13 +93,21 @@ create table code
     valeur int,
     status int 
 )engine = innoDB;
-INSERT INTO code(nombre,valeur,status) VALUES (4256,10000,0);
-INSERT INTO code(nombre,valeur,status) VALUES (4257,5000,0);
-INSERT INTO code(nombre,valeur,status) VALUES (4258,20000,0);
-INSERT INTO code(nombre,valeur,status) VALUES (4259,15000,0);
-INSERT INTO code(nombre,valeur,status) VALUES (4260,10000,1);
+INSERT INTO code(nombre,valeur,status) VALUES (4256,100000,0);
+INSERT INTO code(nombre,valeur,status) VALUES (4257,50000,0);
+INSERT INTO code(nombre,valeur,status) VALUES (4258,200000,0);
+INSERT INTO code(nombre,valeur,status) VALUES (4259,150000,0);
+INSERT INTO code(nombre,valeur,status) VALUES (4260,100000,1);
+INSERT INTO code(nombre,valeur,status) VALUES (4261,80000,0);
+INSERT INTO code(nombre,valeur,status) VALUES (4262,120000,0);
+INSERT INTO code(nombre,valeur,status) VALUES (4263,250000,0);
+INSERT INTO code(nombre,valeur,status) VALUES (4264,500000,0);
+INSERT INTO code(nombre,valeur,status) VALUES (4265,150000,0);
+
+
 create table confirmation  
 (
+    id int PRIMARY KEY auto_increment,
     idUtilisateur int,
     code int ,
     valeur int ,
