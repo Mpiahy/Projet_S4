@@ -3,7 +3,7 @@
 
 <head>
 <title>
-        <?php echo $title; ?>
+        Admin Page
     </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -87,6 +87,7 @@
                                 </tr>
                                     
                                 <?php endforeach ?>
+
                                 <tr></tr>
                             </tbody>
                         </table>
@@ -155,18 +156,33 @@
                 <div class="w-100"></div>
                 <div class="w-100"></div>
             </div>
-            <div class="row">
-                <div class="col-md-4 col-xxl-2">
-                    <h6 class="display-6 text-center" style="font-size: 22px;">$user</h6>
+            <?php foreach ($liste_confirmation as $list): ?>
+                <div class="row">
+                    <div class="col-md-4 col-xxl-2">
+                        <h6 class="display-6 text-center" style="font-size: 22px;"><?php echo $list->idUtilisateur; ?></h6>
+                    </div>
+                    <div class="col-md-4 col-xxl-3">
+                        <h6 class="display-6 text-end" style="font-size: 22px;"><?php echo $list->code; ?></h6>
+                    </div>
+                    <div class="col-md-4 col-xxl-3">
+                        <h6 class="display-6 text-end" style="font-size: 22px;"><?php echo $list->valeur; ?> Ar</h6>
+                    </div>
+                    <div class="col" style="text-align: center;">
+                        <form action="<?php echo base_url("Admin_C/accepter_code"); ?>" method="POST" style="display: inline;">
+                            <input type="hidden" name="id" value="<?php echo $list->id; ?>">
+                            <input type="hidden" name="idUtilisateur" value="<?php echo $list->idUtilisateur; ?>">
+                            <input type="hidden" name="valeur" value="<?php echo $list->valeur; ?>">
+                            <button class="btn btn-primary" data-bss-hover-animate="pulse" type="submit" style="font-family: Montserrat, sans-serif;font-size: 14px;">Accepter</button>
+                        </form>
+                        <form action="<?php echo base_url("Admin_C/refuser_code"); ?>" method="POST" style="display: inline;">
+                            <input type="hidden" name="id" value="<?php echo $list->id; ?>">
+                            <button class="btn btn-danger" data-bss-hover-animate="flash" type="submit" style="margin-left: 30px;font-family: Montserrat, sans-serif;font-size: 14px;">Refuser</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="col-md-4 col-xxl-3">
-                    <h6 class="display-6 text-end" style="font-size: 22px;"><?php echo $vola['id']; ?></h6>
-                </div>
-                <div class="col-md-4 col-xxl-3">
-                    <h6 class="display-6 text-end" style="font-size: 22px;">$valeur Ar</h6>
-                </div>
-                <div class="col" style="text-align: center;"><button class="btn btn-primary" data-bss-hover-animate="pulse" type="button" style="font-family: Montserrat, sans-serif;font-size: 14px;">Accepter</button><button class="btn btn-danger" data-bss-hover-animate="flash" type="button" style="margin-left: 30px;font-family: Montserrat, sans-serif;font-size: 14px;">Refuser</button></div>
-            </div>
+                <br>
+            <?php endforeach ?>
+
         </div>
     </section>
     

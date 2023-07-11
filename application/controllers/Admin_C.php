@@ -37,7 +37,38 @@ class Admin_C extends CI_Controller {
 
 		$data['liste_regime'] = $this->Admin_M->liste_regime();
 		$data['liste_sport'] = $this->Admin_M->liste_sport();
+		$data['liste_confirmation'] = $this->Admin_M->liste_confirmation();
 
 		$this->load->view('admin', $data);
 	}
+
+	public function accepter_code()
+	{
+		$id = $this->input->post('id');
+		$idUtilisateur = $this->input->post('idUtilisateur');
+		$valeur = $this->input->post('valeur');
+
+		// Appel au modèle pour supprimer l'entrée de confirmation
+		$this->Admin_M->delete_confirmation($id);
+
+		// Appel au modèle pour mettre à jour la table "code"
+		$this->Admin_M->update_code($id);
+
+		// Appel au modèle pour effectuer l'addition
+		$this->Admin_M->addition_vola($idUtilisateur, $valeur);
+
+		redirect('Admin_C/index');
+	}
+
+	public function refuser_code()
+	{
+		$id = $this->input->post('id');
+
+		// Appel au modèle pour supprimer l'entrée de confirmation
+		$this->Admin_M->delete_confirmation($id);
+
+		redirect('Admin_C/index');
+	}
+
+
 }
