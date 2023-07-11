@@ -18,15 +18,11 @@ class Argent_C extends CI_Controller {
         $data = array();
         $data['user'] = $this->session->user;
 
-        // Obtenir l'ID de l'utilisateur à partir de $data['user']
-        $userID = $data['user']->id;
-
         // Utiliser $userID comme argument pour getVola()
-        $data['vola'] = $this->Argent_M->getVola($userID);
+        $data['vola'] = $this->Argent_M->getVola();
 
         $data['content'] = 'porte_feuille';
         $this->load->view('template', $data);
-
     }
     public function traitement()
     {

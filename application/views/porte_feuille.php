@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title><?php echo $title; ?></title>
+    <title>Porte Feuille</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="<?php echo base_url('assets/accueil_template/assets/bootstrap/css/bootstrap.min.css'); ?>">
@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-md-6">
                     <?php foreach ($vola as $row): ?>
-                    <h6 class="display-6" style="text-align: left;font-size: 24px;padding-top: 2px;"><?php echo $row['vola']; ?></h6>
+                    <h6 class="display-6" style="text-align: left;font-size: 24px;padding-top: 2px;"><?php echo $row['vola']; ?> Ariary</h6>
                     <?php endforeach ?>
                 </div>
             </div>

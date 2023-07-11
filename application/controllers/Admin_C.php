@@ -30,16 +30,10 @@ class Admin_C extends CI_Controller {
 		$data['keywords'] = 'regime, aliment, saine';
 		$data['autor'] = 'Aina, Manasoa, Mpiahy';
 
+		$data['liste_regime'] = $this->Admin_M->liste_regime();
+		$data['liste_sport'] = $this->Admin_M->liste_sport();
+
 		$this->load->view('admin', $data);
 	}
-
-
-
-   public function liste_regime()
-   {
-	   $data=array();
-	   $data['haha'] = $this->Admin_M->get_regime();
-	   $this->load->view('admin',$data);
-   }
 
 }

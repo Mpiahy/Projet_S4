@@ -3,14 +3,18 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin_M extends CI_Model {
+    public function liste_regime()
+    {
+        $query = $this->db->get('regime');
+        $result = $query->result();
 
-    public function regime(){
-       $query= $this->db->query('SELECT*FROM regime');
-       return $query->result();
-    
+        return $result;
     }
-    public function sport(){
-        $query=$this->db->query('SELECT*FROM sport');
-        return $query->result();
+    public function liste_sport()
+    {
+        $query = $this->db->get('sport');
+        $result = $query->result();
+
+        return $result;
     }
 }

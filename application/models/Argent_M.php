@@ -3,20 +3,13 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Argent_M extends CI_Model {
-    public function getVola($id){
+    public function getVola($id=2){
         $sql = 'SELECT * FROM portefeuille WHERE idUtilisateur = %d';
         $sql = sprintf($sql, $this->db->escape($id));
         $query=$this->db->query($sql);      
         return $query->result_array();
     }
-    public function getUsers($id)
-    {
-        $sql="select * from users where id = %g ";
-        $sql=sprintf($sql,$id);
-        $query=$this->db->query($sql);
-        $resultat=$query->row_array();        
-        return $resultat;  
-    }
+    
     public function verification($code)
     {
         $sql = "SELECT * FROM code where nombre = %g";

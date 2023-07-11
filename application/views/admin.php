@@ -70,16 +70,18 @@
                             <thead>
                                 <tr>
                                     <th style="color: var(--bs-white);font-family: Montserrat, sans-serif;">Aliments</th>
+                                    <th style="color: var(--bs-white);font-family: Montserrat, sans-serif;">Poids</th>
                                     <th style="color: var(--bs-white);font-family: Montserrat, sans-serif;">Durée</th>
                                     <th style="color: var(--bs-white);font-family: Montserrat, sans-serif;">Prix</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                 <?php foreach($data as $result) {?>
+                                <?php foreach ($liste_regime as $list): ?>
                                 <tr>
-                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;"><?php echo  ;?></td>
-                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;"><?php echo  ;?></td>
-                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;"><?php echo   ;?></td>
+                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;"><?php echo $list->nom_regime; ?></td>
+                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;"><?php echo $list->poids; ?> Kg</td>
+                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;"><?php echo $list->duree; ?> Jrs</td>
+                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;"><?php echo $list->prix; ?> Ar</td>
                                     <td style="text-align: center;"><button class="btn btn-info" data-bss-hover-animate="flash" type="button" style="font-family: Montserrat, sans-serif;font-size: 14px;">Modifier</button></td>
                                     <td style="text-align: center;"><button class="btn btn-danger" data-bss-hover-animate="flash" type="button" onclick="supprimerRegime($id_regime)" style="font-family: Montserrat, sans-serif;font-size: 14px;"><?php base_url('Regime_M/delete') ;?>Supprimer</button></td>
                                 </tr>
@@ -101,18 +103,17 @@
                                 </tr>
                             </thead>
                             <tbody>
-                               
-                                
+                                <?php foreach ($liste_sport as $list): ?>
                                 <tr>
-                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;">$nom_regime</td>
-                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;">$durée jours</td>
-                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;">$frais ariary</td>
+                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;"><?php echo $list->nom_sport; ?></td>
+                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;"><?php echo $list->duree; ?> Hr</td>
+                                    <td style="color: var(--bs-white);font-family: Montserrat, sans-serif;"><?php echo $list->frais; ?> Ar</td>
                                     <td style="text-align: center;">
                                     <a href="<?php echo base_url('Regime_M/delete/') ?>">
                                     <button class="btn btn-info" data-bss-hover-animate="flash" type="button" style="font-family: Montserrat, sans-serif;font-size: 14px;">Modifier</button></a></td>
                                     <td style="text-align: center;"><button class="btn btn-danger" data-bss-hover-animate="flash" type="button" style="font-family: Montserrat, sans-serif;font-size: 14px;">Supprimer</button></td>
                                 </tr>
-                               
+                                <?php endforeach ?>
                                 <tr></tr>
                             </tbody>
                         </table>
