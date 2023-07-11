@@ -34,7 +34,7 @@ class Objectif_M extends CI_Model {
 
         $poids_voulu = $this->input->post('poids');
 
-        $depenses = array();
+        $depense_aliment = array();
         foreach ($result as $row) {
             $calcule = $row->poids * $row->duree / $poids_voulu;
 
@@ -53,10 +53,10 @@ class Objectif_M extends CI_Model {
             }
 
             $row->depense = $depense;
-            $depenses[] = $row;
+            $depense_aliment[] = $row;
         }
 
-        return $depenses;
+        return $depense_aliment;
     }
     public function calcul_sport()
     {
@@ -75,29 +75,21 @@ class Objectif_M extends CI_Model {
 
         $poids_voulu = $this->input->post('poids');
 
-        $depenses = array();
+        $depense_sport = array();
+
         foreach ($result as $row) {
-            $calcule = $row->poids * $row->duree / $poids_voulu;
+            $calcule = ($poids_voulu * 3500) / $row->calories;
+            $calcule = intval($calcule); // Convertir en entier
 
-            // Conversion en jours et heures
-            $jours = floor($calcule);
-            $heures = round(($calcule - $jours) * 24);
+            $heures = floor($calcule / 60); // Nombre d'heures
+            $minutes = $calcule % 60; // Nombre de minutes
 
-            $depense = $row->prix * $calcule; // Utilisation de l'alias "prix" pour le calcul de la dépense
-
-            if ($jours > 1) {
-                $row->calcule = $jours . ' jrs et ' . $heures . ' hr';
-            } elseif ($jours == 1) {
-                $row->calcule = $jours . ' jr et ' . $heures . ' hr';
-            } else {
-                $row->calcule = $heures . ' hr';
-            }
-
+            $depense = $calcule * $row->frais / $row->duree; // Utilisation de l'alias "frais" pour le calcul de la dépense
+            $row->calcule = $heures . ' hr ' . $minutes . ' min'; // Affichage du calcul en heures et minutes
             $row->depense = $depense;
-            $depenses[] = $row;
+            $depense_sport[] = $row;
         }
-
-        return $depenses;
+        return $depense_sport;
     }
 
 

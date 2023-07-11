@@ -9,15 +9,24 @@ class Argent_C extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Argent_M');
 		$this->load->model('Login_M');
-
-       
+        $this->load->model('Accueil_M');
+        $this->load->library('form_validation');
+        $this->load->library('session');
     }
-    public function index($idUser)
+    public function index()
     {
         $data = array();
-        $data['vola'] = $this->Argent_M->getVola($idUser);
-        $data['id']= $this->Argent_M->getUsers($idUser);
-         $this->load->view('porte_feuille',$data);
+        $data['user'] = $this->session->user;
+
+        // Obtenir l'ID de l'utilisateur à partir de $data['user']
+        $userID = $data['user']->id;
+
+        // Utiliser $userID comme argument pour getVola()
+        $data['vola'] = $this->Argent_M->getVola($userID);
+
+        $data['content'] = 'porte_feuille';
+        $this->load->view('template', $data);
+
     }
     public function traitement()
     {
