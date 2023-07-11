@@ -18,7 +18,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive" style="padding-right: 0px;">
                 <picture><img src="<?php echo base_url('assets/accueil_template/assets/img/default-removebg-preview.png'); ?>" style="margin-bottom: -190px;margin-top: -188px;padding-bottom: 0px;padding-right: 0px;margin-right: 0px;" width="336" height="309"></picture>
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link link-primary py-3 px-0 px-lg-3 rounded" href="#accueil">Accueil</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link link-primary py-3 px-0 px-lg-3 rounded" href="<?php echo base_url("Login_C/traiteLogin"); ?>">Accueil</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link link-primary py-3 px-0 px-lg-3 rounded" href="<?php echo base_url("Admin_C/index"); ?>">Admin</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link link-primary py-3 px-0 px-lg-3 rounded" href="#Wallet">Porte Feuille</a></li>
                 </ul>
@@ -58,6 +58,7 @@
                                 <tr>
                                     <th style="padding-right: 0px;padding-left: 0px;">Choix</th>
                                     <th style="font-family: Montserrat, sans-serif;">Aliments</th>
+                                    <th style="font-family: Montserrat, sans-serif;">Quantité</th>
                                     <th style="font-family: Montserrat, sans-serif;">Durée</th>
                                     <th style="font-family: Montserrat, sans-serif;">Prix</th>
                                 </tr>
@@ -67,8 +68,9 @@
                                     <tr>
                                         <td><input type="checkbox"></td>
                                         <td style="font-family: Montserrat, sans-serif;"><?php echo $valiny->nom_regime; ?></td>
+                                        <td style="font-family: Montserrat, sans-serif;"><?php echo $valiny->poids; ?> Kg</td>
                                         <td style="font-family: Montserrat, sans-serif;"><?php echo $valiny->calcule; ?></td>
-                                        <td style="font-family: Montserrat, sans-serif;"><?php echo $valiny->depense; ?></td>
+                                        <td style="font-family: Montserrat, sans-serif;"><?php echo $valiny->depense; ?> Ar</td>
                                     </tr>
                                 <?php endforeach ?>
                                 <tr></tr>
@@ -101,12 +103,14 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php foreach ($resultat as $valiny): ?>
                                 <tr>
                                     <td><input type="checkbox"></td>
-                                    <td style="font-family: Montserrat, sans-serif;">$nom_sport</td>
-                                    <td style="font-family: Montserrat, sans-serif;">$durée jours</td>
-                                    <td style="font-family: Montserrat, sans-serif;">$frais_sport</td>
+                                    <td style="font-family: Montserrat, sans-serif;"><?php echo $valiny->nom_sport; ?></td>
+                                    <td style="font-family: Montserrat, sans-serif;"><?php echo $valiny->duree; ?></td>
+                                    <td style="font-family: Montserrat, sans-serif;"><?php echo $valiny->frais; ?></td>
                                 </tr>
+                                <?php endforeach ?>
                                 <tr></tr>
                             </tbody>
                         </table>
