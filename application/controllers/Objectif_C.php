@@ -15,7 +15,8 @@ class Objectif_C extends CI_Controller {
    {
       $this->load->model('Objectif_M');
       $data = array();
-      $data['resultat'] = $this->Objectif_M->calculer();
+      $data['result_regime'] = $this->Objectif_M->calcul_regime();
+      $data['result_sport'] = $this->Objectif_M->calcul_sport();
 
       $this->load->view('proposition', $data);
       

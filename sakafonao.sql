@@ -57,22 +57,25 @@ create table sport
     id int auto_increment primary key,
     nom_sport varchar(50),
     idObjectif int,
-    frais int ,
-    duree int ,
+    frais int,
+    duree int,
+    calories INT ,
     FOREIGN KEY(idObjectif) REFERENCES objectif(idObjectif)
 )engine = innoDB;
 
-INSERT INTO sport (nom_sport,idObjectif,frais,duree) VALUES ('Football',1,40000,30); 
-INSERT INTO sport (nom_sport,idObjectif,frais,duree) VALUES ('Basketball',1,10000,25); 
-INSERT INTO sport (nom_sport,idObjectif,frais,duree) VALUES ('Volley-ball',1,25000,20); 
-INSERT INTO sport (nom_sport,idObjectif,frais,duree) VALUES ('Hand-ball',1,30000,26); 
-INSERT INTO sport (nom_sport,idObjectif,frais,duree) VALUES ('Petanque',11,10000,10); 
-INSERT INTO sport (nom_sport,idObjectif,frais,duree) VALUES ('Golf',11,100000,20); 
-INSERT INTO sport (nom_sport,idObjectif,frais,duree) VALUES ('Tennis de table',1,35000,20); 
-INSERT INTO sport (nom_sport,idObjectif,frais,duree) VALUES ('Aikido',11,15000,15); 
-INSERT INTO sport (nom_sport,idObjectif,frais,duree) VALUES ('Cyclisme',11,20000,5); 
-INSERT INTO sport (nom_sport,idObjectif,frais,duree) VALUES ('Lance de poids',11,15000,20); 
-INSERT INTO sport (nom_sport,idObjectif,frais,duree) VALUES ('Natation',1,20000,10); 
+INSERT INTO sport (nom_sport, idObjectif, frais, duree, calories)
+VALUES
+    ('Football', 1, 200000, 60, 750),
+    ('Basketball', 1, 50000, 50, 650),
+    ('Volley-ball', 1, 125000, 40, 400),
+    ('Hand-ball', 1, 150000, 52, 650),
+    ('Petanque', 11, 50000, 20, 150),
+    ('Golf', 11, 500000, 40, 400),
+    ('Tennis de table', 1, 175000, 40, 300),
+    ('Aikido', 11, 75000, 30, 500),
+    ('Cyclisme', 11, 100000, 10, 700),
+    ('Lancer de poids', 11, 75000, 40, 300),
+    ('Natation', 1, 100000, 20, 550);
 
 create table portefeuille
 (

@@ -28,8 +28,7 @@
     <header class="text-center text-white bg-primary masthead">
         <div class="container" style="padding-bottom: 0px;margin-bottom: -66px;padding-top: 0px;margin-top: -62px;padding-right: 12px;"><img class="img-fluid d-block mx-auto mb-5" src="<?php echo base_url('assets/accueil_template/assets/img/profil.png'); ?>" width="104" height="104">
             <h2><?php echo $id['nom']; ?> </h2>
-            <hr class="star-light" style="margin-bottom: -6px;">
-            <h2 class="display-2 font-weight-light mb-0">Genre: <?php echo $id['genre'] ;?><br>Taille: <?php echo $id['taille'] ;?><br>Poids: <?php echo $id['poids']; ?></h2>
+           
         </div>
     </header>
     <section id="portfolio" class="portfolio">
@@ -43,7 +42,7 @@
                     <h3 style="text-align: right;">Votre solde:</h3>
                 </div>
                 <div class="col-md-6">
-                    <h6 class="display-6" style="text-align: left;font-size: 24px;padding-top: 2px;"><?php echo $vola['vola'] ; ?></h6>
+                    <h6 class="display-6" style="text-align: left;font-size: 24px;padding-top: 2px;"><?php echo $id['vola'] ; ?></h6>
                 </div>
             </div>
         </div>
@@ -56,25 +55,14 @@
                     <div class="col-md-4 col-xxl-3">
                         <input id="codeRecharge" name="codeRecharge" type="number" style="font-family: Montserrat, sans-serif;width: 240.17px;padding-top: 9px;margin-bottom: -2px;height: 27.967px;margin-top: 1px;">
                     </div>
+                    <input type = "hidden" name ="id" value ="<?php echo $id['id']; ?>"
                     <div class="col-md-4" style="padding-bottom: 0px;padding-top: 0px;margin-top: -10px;">
-                        <button class="btn btn-secondary" data-bss-hover-animate="pulse" type="submit" style="font-family: Montserrat, sans-serif;width: 115.1132px;height: 32.9906px;margin-bottom: 9px;padding-bottom: 30px;">Recharger</button>
+                        <button class="btn btn-secondary" data-bss-hover-animate="pulse" type="submit" style="font-family: Montserrat, sans-serif;width: 115.1132px;height: 32.9906px;margin-bottom: 9px;padding-bottom: 30px;">
+                        Recharger</button>
                     </div>
                 </div>
             </form>
         </div>
-
-        <script>
-            document.getElementById("rechargeForm").addEventListener("submit", function(event) {
-                event.preventDefault(); // Empêche la soumission du formulaire
-                
-                // Obtenez la valeur du code de recharge
-                var codeRecharge = document.getElementById("codeRecharge").value;
-                
-                // Après le traitement, vous pouvez rediriger l'utilisateur vers une autre page
-                window.location.href = "URL_de_redirection";
-            });
-        </script>
-
     </section>
 
     <footer class="text-center footer" style="padding-top: 20px;margin-bottom: -82px;">

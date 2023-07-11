@@ -64,7 +64,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($resultat as $valiny): ?>
+                                <?php foreach ($result_regime as $valiny): ?>
                                     <tr>
                                         <td><input type="checkbox"></td>
                                         <td style="font-family: Montserrat, sans-serif;"><?php echo $valiny->nom_regime; ?></td>

@@ -64,7 +64,6 @@ class Login_C extends CI_Controller {
 
 		
 		$id = array();
-		$user_id =array();
 		$email = $this->input->post('email');
 		$password = $this->input->post('password');
 		$user= $this->Login_M->getUsers($email,$password);
@@ -74,10 +73,13 @@ class Login_C extends CI_Controller {
 			if($user['idCon'] == 0)
 			{
 				$this->session->set_userdata('user_id',$user['id']);
-				$user_id['idUser'] = $this->session->userdata('user_id');
+				$id['idUser'] = $this->session->userdata('user_id');
 				$id['id']= $this->Login_M->getUsers($email,$password);
-				$variable = array_merge($data, $id,$user_id);
+				$variable = array_merge($data,$id);
 				$this->load->view('accueil',$variable);
+				$this->load->library('Accueil_C');
+				$this->Accueil_C->set_session_data($id);
+				redirect('Accueil_C/index');
 			}
 			
 			else if($user['idCon'] == 1)
